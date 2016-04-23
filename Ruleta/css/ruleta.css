@@ -1,15 +1,47 @@
+body{
+background-color: green;
+text-align: center;
+overflow: scroll;
+}
 form{
-  text-align: center;
+  background-color: 33CC00;
 }
 
-div h2 {
-  text-align: center;
+div{
+  margin-top: 20px;
+}
+h1 img {
+width: 600px;
+height: 200px;
 
 }
 .botonJugar{
-text-align: center;
+width: auto;
+}
+#miBoton:hover{
+	text-decoration:underline;
+	background-color: #06F;
+}
+#miBoton{
+  font-family: serif;
+  font-weight: bolder;
+  width: 150px;
+	height: 50px;
+	border-color: black;
+  border-radius: 20px;
+  border-style: groove;
 
 }
-.botonesApuesta{
-  text-align: center;
+.saldoJugador{
+  font-size: 100%;
+  background: white;
+  border-width: thick;
+	border-style: groove;;
+	border-color: gold;
+  height: 150px;
+	width: 30%;
+  position: absolute;
+  top: 65%;
+  left: 35%;
+  
 }
