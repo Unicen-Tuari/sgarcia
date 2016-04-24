@@ -1,0 +1,16 @@
+.parteArriba{
+  background-color: grey;
+  
+  color: red;
+  height: 40px;
+  background-image: url("../images/logo.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+div p {
+text-align: right;
+
+}
+.cuerpo{
+  background-image: url("../images/fondoCampo.jpe");
+}
