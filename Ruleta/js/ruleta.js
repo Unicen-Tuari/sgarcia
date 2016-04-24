@@ -4,18 +4,31 @@ var numeroApuesta=-1;
 var cantPerdidas=0;
 var NumeroSalio=0;
 var i=0;
+//#dcdcdc
+function mostrarSaldo(){
+document.getElementById("saldoDisp").value = saldo;
+}
+function acreditarSaldo(){
+//document.getElementById(id_saldo)+=valor a sumar
+//de esta manera actualizamos el valir de la pantalla
+saldo+=10;
+cantPerdidas=0;
+mostrarSaldo();
+}
 function descontarSaldo(){
 //esta funcion deberia descontar saldo del apostador
 //debe utilizar:
 //document.getElementById(id_saldo)-=valor a descontar
 //de esta manera actualizamos el valir de la pantalla
-if (cantPerdidas>=3){
+cantPerdidas+=1;
+if (cantPerdidas ==3){
     saldo-=2;
-    cantPerdidas+=1;}
-   {
-     saldo-=1;
-     cantPerdidas+=1;
-   }
+    cantPerdidas=0;
+    mostrarSaldo();
+    return;
+  }
+saldo-=1;
+mostrarSaldo();
 }
 function getRadioButtonSelectedValue(ctrl)
 {
@@ -29,17 +42,6 @@ function NoSetRadioButton(ctrl)
         if(ctrl[i].checked) {
           return false}
         return true;
-        
-}
-
-
-function acreditarSaldo(){
-//esta funcion deberia descontar saldo del apostador
-//debe utilizar:
-//document.getElementById(id_saldo)+=valor a sumar
-//de esta manera actualizamos el valir de la pantalla
-
-cantPerdidas=0;
 }
 function generarJugada(){
   //esta funcion me genera un valor de 0 a 9 (10 posibles valores)
@@ -64,6 +66,10 @@ function tirarRuleta(){
   if (NoSetRadioButton(document.botonesApuesta.valorApuesta)) {
     alert("Por favor seleccione su apuesta");
   return;
+  }
+  if (saldo<=0) {
+    alert("No puede seguir jugando te quedaste si guita papaaaaaa!!!!");
+    return;
   }
   Apostar();
 }

@@ -1,11 +1,33 @@
+
 body{
 background-color: green;
 text-align: center;
 overflow: scroll;
+background-image: url("../images/icono.jpg");
+background-repeat: no-repeat;
+background-attachment: scroll;
+background-position: 100% 0%;
+
 }
 form{
   background-color: 33CC00;
 }
+button
+{
+    font-size: 16px;
+    font-variant: small-caps;
+    padding: 10px;
+    cursor: pointer;
+    -webkit-transition: background 2s, color 2s, -webkit-transform 2s; /* For Safari 3.1 to 6.0 */
+    transition: background 2s, color 2s, transform 2s;
+    border: 1px solid #fff;
+}
+button:hover
+{
+    color: #fff;
+    background: #000;
+}
+
 
 div{
   margin-top: 20px;
@@ -13,9 +35,16 @@ div{
 h1 img {
 width: 600px;
 height: 200px;
+}
+form input{
+text-align: center;
+font-size: 30px;
 
 }
 .botonJugar{
+margin: 20px 0 20px 0;
+padding: 10px;
+text-align: center;
 width: auto;
 }
 #miBoton:hover{
@@ -43,5 +72,4 @@ width: auto;
   position: absolute;
   top: 65%;
   left: 35%;
-  
-}
+  }
