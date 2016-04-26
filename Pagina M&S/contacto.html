@@ -1,12 +1,63 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link href="images/Logos/logo_head.ico" type="image/x-icon" rel="shortcut icon" >
     <meta charset="utf-8">
-    <title>Contacto M&S</title>
+    <title>Martines&Staneck</title>
+    <link rel="stylesheet" href="css/M&S.css" media="screen" title="no title" charset="utf-8">
   </head>
   <body>
-<form class="contact" action="index.html" method="post">
-  
-</form>
-  </body>
+    <div class="parteArriba">
+      <img src="images/Logos/martinez-staneck 123 x 61.png" alt="logo mys" />
+      <p class="textIzq">
+        Innovando tecnologia Desde 1983
+      </p>
+    </div>
+    <div class="menuNavegacion">
+      <ul>
+        <li><a href="indexM&S.html">Home</a></li>
+        <li><a href="empresa.html">La Empresa</a></li>
+        <li><a href="maquinas.html">Las Maquinas</a>
+              <ul>
+                <li><a href="">Embutidoras</a></li>
+                <li><a href="">Mixers</a></li>
+                <li><a href="">Moledoras</a></li>
+              </ul>
+        </li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </div>
+    <div class="cuerpoContacto">
+      <h1>CONTACTESE CON NOSOTROS</h1>
+      <form>
+        Nombre:   <input type="text" name="nombre" value="">
+      </form>
+      <form>
+        Apellido: <input type="text" name="apellido" value="">
+      </form>
+      <form>
+        Telefono: <input type="text" name="Telefono" value="">
+      </form>
+      <form>
+        e-mail:   <input type="text" name="mail" value="">
+      </form>
+      <form>
+        Como llego a nosotros <input type="radio" name="nexo" value="">Ya tiene una maquina
+        <input type="radio" name="nexo" value="">Consecionario
+        <input type="radio" name="nexo" value="">Vendedor Zonal
+        <input type="radio" name="nexo" value="">Internet
+        <input type="radio" name="nexo" value="">otro <input type="text" name="nexo" value="">
+      </form>
+      <form>
+        <h2>Consulta</h2>
+        <textarea name="comentario" rows="8" cols="100">
+        </textarea>
+      </form>
+      <form>
+       <input class="botonEnviar" type="submit" onclick="mensajeEnviado()" value="Enviar"/>
+      </form>
+
+    </div>
+</body>
+  <script src="js/M&S.js" charset="utf-8"></script>
 </html>

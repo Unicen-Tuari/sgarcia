@@ -1,69 +1,151 @@
-body{
-  background-image: url("../images/campo.jpe");
-  overflow: scroll;
-}
-div img{
-  position: absolute;;
-  top: 0px;
-  left: 10px;
-}
+
 .parteArriba{
-  position:absolute;
+  position:fixed;
   background: grey;
   top: 0px;
   left: 0px;
   width: 100%;
   height: 70px;
+  border-bottom: groove;
+  border-bottom-width: 5px;
+  border-bottom-color: yellow;
+  z-index: 2;
 }
-.textIzq {
-position: absolute;
-top: 0px;
-text-align: left;
-margin: 3px;
-right: 5%;
-color: #7D0B0B;
-font-size: 23px;
+.parteArriba img{
+  top: 0px;
+  left: 10px;
+  z-index: 3;
+}
 
+.parteArriba p {
+  position: fixed;
+  top: 0px;
+  text-align: left;
+  margin: 3px;
+  right: 5%;
+  color: white;
+  font-size: 23px;
+  font-family:Arial, Helvetica, sans-serif;
 }
+
 .menuNavegacion{
-position: absolute;
-background: grey;
-top: 70px;
-left: 0px;
-width: 140px;
-height:105%;
-font-size: 20px;
-line-height: 150px;
-}
-
-a{
-  font-style: italic;
-  color: yellow;
-  text-decoration: none;
-
-}
-.cuerpo{
-  position: absolute;
-  top: 60px;
-  left: 150px;
-}
-.cuerpo p {
-  text-align: justify;
+  position: fixed;
+  background: grey;
+  top: 0px;
+  left: 0px;
+  width: 170px;
+  height:100%;
   font-size: 20px;
+  line-height: 100px;
+  z-index: 1;
+  border-right: groove;
+  border-right-width: 5px;
+  border-right-color: yellow;
+}
+.menuNavegacion ul{
+  position: fixed;
+  top: 100px;
+  left: 0px;
+  font-style: italic;
+  list-style: none;
+}
+.menuNavegacion li:hover{
+  margin: 0px;
+  background-color: #555555;
   color: black;
 }
-.cuerpo img{
-position: absolute;
-top: 100%;
-left: 0%;
+.menuNavegacion li ul {
+				display:none;
+				position:absolute;
+        top: 200px;
+        left: 120px;
+			}
+.menuNavegacion li:hover > ul {
+				display:block;
+			}
+.menuNavegacion li ul li {
+				position:relative;
+			}
+.menuNavegacion li ul li ul {
+				right:-140px;
+				top:0px;
+			}
+.menuNavegacion a{
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
 }
-.enlinea{
-position: absolute;
-top: 85%;
-left: 50%;
+.menuNavegacion li li a{
+  font-weight: bolder;
+  color: black;
 }
-#ubicac{
+.cuerpoHome{
+position: absolute;
+top: 70px;
+left: 170px;
+background-image: url(../images/fondos/AereaPlanta.jpg);
+height: 100%;
+width: 100%;
+}
+.cuerpoEmpresa{
+position: absolute;
+top: 70px;
+left: 170px;
+padding: 10px;
+background: teal;
+text-align: center;}
+
+.cuerpoEmpresa p{
+  text-align: justify;
+}
+
+.cuerpoContacto{
   position: absolute;
-  top: 100%;
-  left: 50%;
+  top: 70px;
+  left: 170px;
+  padding-left: 100px;
+  background: teal;
+  width: 100%;
+  height: 100%;
+  color: black;
+  line-height: 50px;
+  font-size: 18px;
+  font-family:Arial, Helvetica, sans-serif;
 }
+.cuerpoContacto h1,h2{
+  color: white;
+}
+.botonEnviar:hover {
+  background-color: #555555;
+  color: black;
+}
+.cuerpoMaquinas{
+  position: absolute;
+  top: 70px;
+  left: 170px;
+  padding-top: 20px;
+  padding-left: 100px;
+  background: teal;
+  width: 100%;
+  height: auto;
+}
+.cuerpoMaquinas p{
+  color: white;
+  font-size: 20px;
+  font-family:Arial, Helvetica, serif;
+}
+
+#picture {
+		float:left;
+		width: 33%;
+	}
+table,th,td{
+  text-align: center;
+  border: 1px groove gold;
+}
+.filagris{
+  background: grey;
+}
+.stopfloat {
+		clear:both;
+	}
