@@ -42,8 +42,8 @@ font-size: 30px;
 
 }
 .botonJugar{
-margin: 20px 0 20px 0;
-padding: 10px;
+margin: 10px 0 10px 0;
+padding: 5px;
 text-align: center;
 width: auto;
 }
@@ -67,9 +67,9 @@ width: auto;
   border-width: thick;
 	border-style: groove;;
 	border-color: gold;
-  height: 150px;
+  height: 255px;
 	width: 30%;
   position: absolute;
-  top: 65%;
+  top: 55%;
   left: 35%;
   }

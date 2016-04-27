@@ -8,6 +8,9 @@ var i=0;
 function mostrarSaldo(){
 document.getElementById("saldoDisp").value = saldo;
 }
+function mostrarNumeroSalido(){
+  document.getElementById("bolaSorteada").value = NumeroSalio;
+}
 function acreditarSaldo(){
 //document.getElementById(id_saldo)+=valor a sumar
 //de esta manera actualizamos el valir de la pantalla
@@ -54,10 +57,11 @@ function Apostar(){
   if (NumeroSalio==getRadioButtonSelectedValue(document.botonesApuesta.valorApuesta))
   // muestra el resultado
     {alert("ganador");
+    mostrarNumeroSalido()
     acreditarSaldo();}
   else{
-
     alert("perdedor");
+    mostrarNumeroSalido()
     descontarSaldo();
   }
   // llamar a la funccion que acredita o quita saldo
