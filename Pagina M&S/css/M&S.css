@@ -131,10 +131,13 @@ text-align: center;}
 }
 .cuerpoMaquinas p{
   color: white;
-  font-size: 20px;
+  font-size: 15px;
   font-family:Arial, Helvetica, serif;
+  text-align: justify;
 }
-
+#mix,#mol{
+  height: 100%;
+}
 #picture {
 		float:left;
 		width: 33%;
