@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>RULETA 2.0 </title>
+  <link href="css/bootstrap.css" rel="stylesheet">
+  <link href="css/estilos.css" rel="stylesheet">
+</head>
+<body class="algo">
+  <header>
+    <h1 class="tit_pag">LE JEAUX - JUEGOS DE AZAR </h1>
+  </header>
+  <nav class="navbar navbar-default">
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <p class="navbar-text">Saldo disponible</p>
+      <form class="navbar-form navbar-left" role="search">
+        <div class="form-group">
+          <input id="saldo_disp" type="text" class="form-control"  readonly="readonly">
+        </div>
+      </form>
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Cargar credito</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <p class="navbar-text">Su apuesta</p>
+        <form class="navbar-form navbar-left" role="search">
+          <div class="form-group">
+            <input id="lista_apuesta" type="text" class="form-control"  readonly="readonly">
+          </div>
+        </form>
+        <li class="active"><a href="#">Jugar</a></li>
+      </ul>
+    </div><!-- /.container-fluid -->
+  </nav>
+<article class="mesa_de_juego">
+  <section class="col-md-4 col-sm-12 tabla">
+      <input type="button" class="apuesta col-md-12" value="0"></input>
+      <input type="button" class="apuesta col-md-4" value="1"></input>
+      <input type="button" class="apuesta col-md-4" value="2"></input>
+      <input type="button" class="apuesta col-md-4" value="3"></input>
+      <input type="button" class="apuesta col-md-4" value="4"></input>
+      <input type="button" class="apuesta col-md-4" value="5"></input>
+      <input type="button" class="apuesta col-md-4" value="6"></input>
+      <input type="button" class="apuesta col-md-4" value="7"></input>
+      <input type="button" class="apuesta col-md-4" value="8"></input>
+      <input type="button" class="apuesta col-md-4" value="9"></input>
+      <input type="button" class="apuesta col-md-4" value="10"></input>
+  </section>
+  <section id="pamostrar">
+
+  </section>
+<footer>
+
+</footer>
+</article>
+
+
+</body>
+<script src="js/jquery-3.0.0.min.js" charset="utf-8"></script>
+<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>-->
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="js/bootstrap.min.js"></script>
+<script src="js/ruleta2.js"></script>
+</html>
