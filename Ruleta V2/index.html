@@ -1,22 +1,80 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>RULETA 2.0 </title>
-    <link href="css/estilos.css" rel="stylesheet">
-    <link href="css/bootstrap.css" rel="stylesheet">
-    <link href="css/bootstrap-theme.css" rel="stylesheet">
-  </head>
-  <body>
-   <header>
-     <h1 class="tit_pag">LE JEAUX - JUEGOS DE AZAR </h1>
-   </header>
-<p>
-  hdsahdjkah
-</p>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>RULETA 2.0 </title>
+  <link href="css/bootstrap.css" rel="stylesheet">
+  <link href="css/estilos.css" rel="stylesheet">
+</head>
+<body class="algo">
+  <header>
+    <h1 class="tit_pag">LE JEAUX - JUEGOS DE AZAR </h1>
+  </header>
+<article class="mesa_de_juego">
+  <section class="col-md-4 mesa_apuesta">
+      <input type="button" class="apuesta  button fondo-green" value="0"></input>
+      <input type="button" class="apuesta  button fondo-red" value="1"></input>
+      <input type="button" class="apuesta  button fondo-black" value="2"></input>
+      <input type="button" class="apuesta  button fondo-red" value="3"></input>
+      <input type="button" class="apuesta  button fondo-black" value="4"></input>
+      <input type="button" class="apuesta  button fondo-red" value="5"></input>
+      <input type="button" class="apuesta  button fondo-red" value="6"></input>
+      <input type="button" class="apuesta  button fondo-black" value="7"></input>
+      <input type="button" class="apuesta  button fondo-red" value="8"></input>
+      <input type="button" class="apuesta  button fondo-black" value="9"></input>
+      <input type="button" class="apuesta  button fondo-red" value="10"></input>
+      <input type="button" class="col-md-12 apuesta otrasapuestas  button largo fondo-black" value="NEGRO"></input>
+      <input type="button" class="col-md-12 apuesta otrasapuestas  button largo fondo-red" value="ROJO"></input>
+      <input type="button" class="col-md-12 apuesta otrasapuestas  button largo fondo-gris" value="PAR"></input>
+      <input type="button" class="col-md-12 apuesta otrasapuestas  button largo fondo-gris" value="IMPAR"></input>
+      <input type="button" class="col-md-12 apuesta otrasapuestas  button largo fondo-gris" value="MAYOR"></input>
+      <input type="button" class="col-md-12 apuesta otrasapuestas  button largo fondo-gris" value="MENOR"></input>
+      <input type="button" class="col-md-12 apuesta otrasapuestas  button largoxl fondo-gris" value="APUESTADOBLE"></input>
 
+  </section>
+  <section class="col-md-2 tablaapuestas">
+    <ul class="list-group">
+    <li class="list-group-item maspetizo fondo-green" id="0">0</li>
+    <li class="list-group-item maspetizo fondo-red" id="1"><span class="badge"></span> 1</li>
+    <li class="list-group-item maspetizo fondo-black" id="2"><span class="badge"></span> 2</li>
+    <li class="list-group-item maspetizo fondo-red" id="3"><span class="badge"></span> 3</li>
+    <li class="list-group-item maspetizo fondo-black" id="4"><span class="badge"></span> 4</li>
+    <li class="list-group-item maspetizo fondo-red" id="5"><span class="badge"></span> 5</li>
+    <li class="list-group-item maspetizo fondo-black" id="6"><span class="badge"></span> 6</li>
+    <li class="list-group-item maspetizo fondo-red" id="7"><span class="badge"></span> 7</li>
+    <li class="list-group-item maspetizo fondo-black" id="8"><span class="badge"></span> 8</li>
+    <li class="list-group-item maspetizo fondo-red" id="9"><span class="badge"></span> 9</li>
+    <li class="list-group-item maspetizo fondo-black" id="10"><span class="badge"></span> 10</li>
+    <li class="list-group-item maspetizo fondo-red" id="ROJO"><span class="badge"></span> ROJO</li>
+    <li class="list-group-item maspetizo fondo-black" id="NEGRO"><span class="badge"></span> NEGRO</li>
+    <li class="list-group-item maspetizo fondo-gris" id="MAYOR"><span class="badge"></span> MAYOR</li>
+    <li class="list-group-item maspetizo fondo-gris" id="MENOR"><span class="badge"></span> MENOR</li>
+    <li class="list-group-item maspetizo fondo-gris" id="PAR"><span class="badge"></span> PAR</li>
+    <li class="list-group-item maspetizo fondo-gris" id="IMPAR"><span class="badge"></span> IMPAR</li>
+  </ul>
+  </section>
+<section class="col-md-offset-2 col-md-3 ">
+  <div class="panel panel-default">
+  <div class="panel-heading text-center">$$$$$ CREDITO $$$$$</div>
+  <div class="panel-body text-center" id="credit">
+  </div>
+</div>
+</section>
+<section class="col-md-offset-2 col-md-3 ">
+  <input type="button" class="col-md-12 apuesta  button largoxl fondo-gris" id="jugar" value="JUGAR!!!!"></input>
+  <div class="col-md-12"><p></p></div>
+  <img class="col-md-12" id="fotoruleta" src="images/ruletaquieta.jpg" alt="ruleta" />
+</section>
+</article>
+<footer>
 
-  </body>
+</footer>
+</body>
+<script src="js/jquery-3.0.0.min.js" charset="utf-8"></script>
+<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>-->
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="js/bootstrap.min.js"></script>
+<script src="js/ruleta2.js"></script>
 </html>
