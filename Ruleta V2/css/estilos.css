@@ -1,8 +1,63 @@
-.tit_pag{
-  color:red;
+header h1{
+  color: white;
   text-align: center;
-  font-family: cursive;
+  background-color: black;
+  margin: 0px;
+  font-size: 50px;
 }
-p{
-  background-color: red;
+.tit_pag{
+  text-shadow: 0 0 10px #fff,
+  0 0 20px #fff,
+  0 0 30px #fff,
+  0 0 40px #048B26,
+  0 0 70px #048B26,
+  0 0 80px #048B26,
+  0 0 100px #048B26,
+  0 0 150px #048B26;
+  padding: 20px;
+  text-align: center;
+  font-family:cursive;
+  }
+body{
+  background-color: #068306;
+}
+.button{
+width: 30%;
+height: 70px;
+font: bold 1.5em 'Trebuchet MS',Arial,Helvetica;
+border-radius: 35px 35px 35px 35px;
+}
+
+.largo{
+width: 50%;
+}
+.largoxl{
+width: 100%;
+}
+
+
+.fondo-green{
+   background: #26E226;
+}
+.fondo-red {
+    background: red;
+    color: black;
+}
+.fondo-black {
+    background: black;
+    color: red;
+}
+.fondo-gris {
+    background: grey;
+    color: green;
+}
+
+.button-blue:hover {
+    background: -moz-linear-gradient(-90deg, #4477A1, #81A8CB) repeat scroll 0 0 transparent;
+}
+.button-blue:active {
+    background: none repeat scroll 0 0 #4477A1;
+}
+.maspetizo{
+  padding: 5px 15px;
 }
