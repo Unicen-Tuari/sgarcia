@@ -1,14 +1,15 @@
 "use strict";
 $(document).ready(function(){
-handleClick("HTML/inicio.html");
+cargaretiqueta("HTML/inicio.html");
 
-function handleClick(etiqueta) {
+function cargaretiqueta(etiqueta) {
     //$("#contenido").html("<h1>Loading 1</h1>");
+    event.preventDefault();
     $.ajax({
             url:etiqueta,
             error: function () {
-            alert("no cargo");
-            },
+                    alert("no cargo");
+                    },
             dataType: "HTML",
             success: function (receivedData) {
               $("#contenido").html(receivedData);
@@ -19,10 +20,10 @@ function handleClick(etiqueta) {
           }
         );
   }
-  $("#empresa").on("click", function(){handleClick("../HTML/empresa.html")});
-  $("#maquinas").on("click", function(){handleClick("../HTML/maquinas.html")});
-  $("#embutidoras").on("click", function(){handleClick("../HTML/embutidora.html")});
-  $("#mixer").on("click", function(){handleClick("../HTML/mixers.html")});
-  $("#moledoras").on("click", function(){handleClick("../HTML/moledora.html")});
-  $("#contacto").on("click", function(){handleClick("../HTML/contacto.html")});
+  $("#empresa").on("click", function(){cargaretiqueta("../HTML/empresa.html")});
+  $("#maquinas").on("click", function(){cargaretiqueta("../HTML/maquinas.html")});
+  $("#embutidoras").on("click", function(){cargaretiqueta("../HTML/embutidora.html")});
+  $("#mixer").on("click", function(){cargaretiqueta("../HTML/mixers.html")});
+  $("#moledoras").on("click", function(){cargaretiqueta("../HTML/moledora.html")});
+  $("#contacto").on("click", function(){cargaretiqueta("../HTML/contacto.html")});
 });
