@@ -83,10 +83,10 @@ function GenerarRenglones(info) {
     html += '<tr>';
     html += '<td class="warning">'+info[i].codigo+'</td>';
     html += '<td class="warning">'+info[i].descripcion+'</td>';
-    html += '<td class="warning">$'+info[i].precio+'</td>'
+    html += '<td class="warning">$'+info[i].precio+'</td>';
     html += '<td class="warning">'+info[i].descripcion+'</td>';
-    html += '<td class="warning">$'+info[i].precio+'</td>'
-    html += '<td class="active"><button type="button" class="btn btn-danger" href="#">Borrar</button></td>'
+    html += '<td class="warning">$'+info[i].precio+'</td>';
+    html += '<td class="active"><button type="button" class="btn btn-danger">Borrar</button></td>';
     html += '</tr>';
     return html;
 };
