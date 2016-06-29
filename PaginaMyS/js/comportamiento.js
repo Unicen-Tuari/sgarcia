@@ -20,6 +20,7 @@ function cargaretiqueta(etiqueta) {
           }
         );
   }
+  $("#hom").on("click", function(){cargaretiqueta("HTML/empresa.html")});
   $("#empresa").on("click", function(){cargaretiqueta("HTML/empresa.html")});
   $("#maquinas").on("click", function(){cargaretiqueta("HTML/maquinas.html")});
   $("#embutidoras").on("click", function(){cargaretiqueta("HTML/embutidora.html")});
