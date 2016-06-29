@@ -4,7 +4,7 @@ cargaretiqueta("HTML/inicio.html");
 
 function cargaretiqueta(etiqueta) {
     //$("#contenido").html("<h1>Loading 1</h1>");
-    event.preventDefault();
+    //event.preventDefault();
     $.ajax({
             url:etiqueta,
             error: function () {
