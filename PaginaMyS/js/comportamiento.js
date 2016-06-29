@@ -1,8 +1,16 @@
 "use strict";
-$("#hom").on("click", handleClick);
-function handleClick() {
+$("#hom").on("click", handleClick("inicio"));
+$("#empresa").on("click", handleClick('empresa'));
+$("#maquinas").on("click", handleClick('maquinas'));
+$("#pag_embutidoras").on("click", handleClick('embutidora'));
+$("#pag_mixer").on("click", handleClick('mixers'));
+$("#pag_moledoras").on("click", handleClick('moledora'));
+$("#form_contacto").on("click", handleClick('contacto'));
+
+
+function handleClick(etiqueta) {
     $("#contenido").html("<h1>Loading 1</h1>");
-    $.ajax("https://paginamys.herokuapp.com/PaginaMyS/HTML/inicio.html",
+    $.ajax("https://paginamys.herokuapp.com/PaginaMyS/HTML/"+etiqueta+".html",
           {
             error: function () {
               alert("no cargo");
