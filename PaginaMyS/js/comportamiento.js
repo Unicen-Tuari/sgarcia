@@ -30,7 +30,7 @@ function cargaretiqueta(etiqueta) {
   $("#tablas").on("click", function(){cargaretiqueta("HTML/tecnica.html")});
   $("#btnGuardarInfo").on('click',CargarRenglon);
 
-  function CargarRenglon() {
+  /*function CargarRenglon() {
   event.preventDefault();
   var grupo = 16;
   var informacion = {
@@ -90,5 +90,5 @@ function GenerarRenglones(info) {
     html += '</tr>';
     return html;
 };
-
+*/
 });
