@@ -43,10 +43,6 @@ function cargaretiqueta(etiqueta) {
       Caract_big:"",
       Caract_twin:""
   };
-  var info = {
-     "group": grupo,
-     "thing": informacion
-   };
    var lista =$('.entradas');
    for (var i = 0; i < lista.length; i++) {
      if (lista[i].value == "") {
@@ -59,6 +55,10 @@ function cargaretiqueta(etiqueta) {
    informacion.Caract_699=Lista[2];
    informacion.Caract_big=Lista[3];
    informacion.Caract_twin=Lista[4];
+   var info = {
+     "group": grupo,
+     "thing": informacion
+   };
   $.ajax({
       url:"http://web-unicen.herokuapp.com/api/create",
       method:"POST",
@@ -66,10 +66,11 @@ function cargaretiqueta(etiqueta) {
       contentType: "application/json; charset=utf-8",
       data: JSON.stringify(info),
       success: function(resultData){
+        alert("entro");
         $('#aviso').html('Se guardo con exito ID:'+resultData.information._id);
         $('#aviso').addClass('alert-success');
         mostrarrenglon(informacion);
-      },
+          },
       error:function(jqxml, status, errorThrown){
         $('#aviso').html('Error intente mas tarde');
         $('#aviso').addClass('alert-danger');
