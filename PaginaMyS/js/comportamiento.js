@@ -1,11 +1,11 @@
 "use strict";
 $(document).ready(function(){
-handleClick("inicio");
+handleClick("HTML/inicio.html");
 
 function handleClick(etiqueta) {
     //$("#contenido").html("<h1>Loading 1</h1>");
     $.ajax({
-            url:"HTML/"+etiqueta+".html",
+            url:etiqueta,
             error: function () {
             alert("no cargo");
             },
@@ -19,10 +19,10 @@ function handleClick(etiqueta) {
           }
         );
   }
-  $("#empresa").on("click", function(){handleClick("empresa")});
-  $("#maquinas").on("click", function(){handleClick("maquinas")});
-  $("#embutidoras").on("click", function(){handleClick("embutidora")});
-  $("#mixer").on("click", function(){handleClick("mixers")});
-  $("#moledoras").on("click", function(){handleClick("moledora")});
-  $("#contacto").on("click", function(){handleClick("contacto")});
+  $("#empresa").on("click", function(){handleClick("../HTML/empresa.html")});
+  $("#maquinas").on("click", function(){handleClick("../HTML/maquinas.html")});
+  $("#embutidoras").on("click", function(){handleClick("../HTML/embutidora.html")});
+  $("#mixer").on("click", function(){handleClick("../HTML/mixers.html")});
+  $("#moledoras").on("click", function(){handleClick("../HTML/moledora.html")});
+  $("#contacto").on("click", function(){handleClick("../HTML/contacto.html")});
 });
