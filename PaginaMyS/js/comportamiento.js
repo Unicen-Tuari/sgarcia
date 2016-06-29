@@ -26,5 +26,5 @@ function cargaretiqueta(etiqueta) {
   $("#mixer").on("click", function(){cargaretiqueta("HTML/mixers.html")});
   $("#moledoras").on("click", function(){cargaretiqueta("HTML/moledora.html")});
   $("#contacto").on("click", function(){cargaretiqueta("HTML/contacto.html")});
-  $("#enviar").on("click", function(){cargaretiqueta("HTML/contacto.html")});
+  $("#enviar").on("click", function(){cargaretiqueta("../HTML/contacto.html")});
 });
