@@ -5,7 +5,7 @@ handleClick("inicio");
 function handleClick(etiqueta) {
     //$("#contenido").html("<h1>Loading 1</h1>");
     $.ajax({
-            url:"https://paginamys.herokuapp.com/PaginaMyS/HTML/"+etiqueta+".html",
+            url:"HTML/"+etiqueta+".html",
             error: function () {
             alert("no cargo");
             },
@@ -21,8 +21,8 @@ function handleClick(etiqueta) {
   }
   $("#empresa").on("click", function(){handleClick("empresa")});
   $("#maquinas").on("click", function(){handleClick("maquinas")});
-  $("#pag_embutidoras").on("click", function(){handleClick("embutidora")});
-  $("#pag_mixer").on("click", function(){handleClick("mixers")});
-  $("#pag_moledoras").on("click", function(){handleClick("moledora")});
-  $("#form_contacto").on("click", function(){handleClick("contacto")});
+  $("#embutidoras").on("click", function(){handleClick("embutidora")});
+  $("#mixer").on("click", function(){handleClick("mixers")});
+  $("#moledoras").on("click", function(){handleClick("moledora")});
+  $("#contacto").on("click", function(){handleClick("contacto")});
 });
