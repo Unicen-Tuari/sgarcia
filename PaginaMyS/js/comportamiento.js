@@ -28,7 +28,8 @@ function cargaretiqueta(etiqueta) {
   $("#moledoras").on("click", function(){cargaretiqueta("HTML/moledora.html")});
   $("#contacto").on("click", function(){cargaretiqueta("HTML/contacto.html")});
   $("#tablas").on("click", function(){cargaretiqueta("HTML/tecnica.html")});
-  $("#btnGuardarInfo").on("click",function(){CargarRenglon()});
+  $("#btnGuardarInfo").on("click",function(){alert("nada");
+    CargarRenglon()});
 
 
 
