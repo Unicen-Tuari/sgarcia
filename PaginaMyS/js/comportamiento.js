@@ -28,9 +28,9 @@ function cargaretiqueta(etiqueta) {
   $("#moledoras").on("click", function(){cargaretiqueta("HTML/moledora.html")});
   $("#contacto").on("click", function(){cargaretiqueta("HTML/contacto.html")});
   $("#tablas").on("click", function(){cargaretiqueta("HTML/tecnica.html")});
-  $("#btnGuardarInfo").on('click',CargarRenglon);
+  $("#btnGuardarInfo").on("click",function(){CargarRenglon()});
 
-  /*function CargarRenglon() {
+  function CargarRenglon() {
   event.preventDefault();
   var grupo = 16;
   var informacion = {
@@ -90,5 +90,5 @@ function GenerarRenglones(info) {
     html += '</tr>';
     return html;
 };
-*/
+
 });
