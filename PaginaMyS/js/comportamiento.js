@@ -32,16 +32,16 @@ function cargaretiqueta(etiqueta) {
 
 
 
- /*
+// /*
   function CargarRenglon() {
   event.preventDefault();
   var grupo = 16;
   var informacion = {
-      Caract="";
-      Caract_499="";
-      Caract_699="";
-      Caract_big="";
-      Caract_twin="";
+      Caract:"",
+      Caract_499:"",
+      Caract_699:"",
+      Caract_big:"",
+      Caract_twin:""
   };
   var info = {
      "group": grupo,
@@ -93,5 +93,5 @@ function GenerarRenglones(info) {
     html += '</tr>';
     return html;
 };
- */
+// */
 });
