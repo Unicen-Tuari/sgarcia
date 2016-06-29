@@ -2,7 +2,7 @@
 $("#hom").on("click", handleClick);
 function handleClick() {
     $("#contenido").html("<h1>Loading 1</h1>");
-    $.ajax("https://paginamys.herokuapp.com/PaginaMyS/HTML",
+    $.ajax("https://paginamys.herokuapp.com/PaginaMyS/HTML/inicio.html",
           {
             error: function () {
               alert("no cargo");
