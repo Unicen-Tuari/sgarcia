@@ -29,7 +29,10 @@ function cargaretiqueta(etiqueta) {
   $("#contacto").on("click", function(){cargaretiqueta("HTML/contacto.html")});
   $("#tablas").on("click", function(){cargaretiqueta("HTML/tecnica.html")});
   $("#btnGuardarInfo").on("click",function(){CargarRenglon()});
-/*
+
+
+
+// /*
   function CargarRenglon() {
   event.preventDefault();
   var grupo = 16;
@@ -39,7 +42,7 @@ function cargaretiqueta(etiqueta) {
       Caract_699="";
       Caract_big="";
       Caract_twin="";
-  }
+  };
   var info = {
      "group": grupo,
      "thing": informacion
@@ -51,11 +54,11 @@ function cargaretiqueta(etiqueta) {
        return;
      }
    }
-   informacion.Caract="";
-   informacion.Caract_499="";
-   informacion.Caract_699="";
-   informacion.Caract_big="";
-   informacion.Caract_twin="";
+   informacion.Caract=Lista[0];
+   informacion.Caract_499=Lista[1];
+   informacion.Caract_699=Lista[2];
+   informacion.Caract_big=Lista[3];
+   informacion.Caract_twin=Lista[4];
   $.ajax({
       url:"http://web-unicen.herokuapp.com/api/create",
       method:"POST",
@@ -72,7 +75,6 @@ function cargaretiqueta(etiqueta) {
         $('#aviso').addClass('alert-danger');
       }
     });
-};
 function mostrarrenglon(info) {
   var renglon= GenerarRenglon(info)
   $("#tabla_caract").html(renglon);
@@ -90,5 +92,6 @@ function GenerarRenglones(info) {
     html += '</tr>';
     return html;
 };
-*/
+};
+// */
 });
