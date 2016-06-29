@@ -1,15 +1,16 @@
 <div class="col-md-offset-2 col-md-8">
   <div class="panel-heading">
-    <h3 class="panel-title text-center">DATOS TECNICOS</h3>
+    <h3 class="panel-title text-center">CARACTERISTICAS TENICAS DE LOS EQUIPOS</h3>
   </div>
   <div class="table-responsive">
-    <table class="table">
+    <table id="tabla_caract" class="table">
       <tr>
-        <td class="active">algo</td>
-        <td class="active">algo2</td>
-        <td class="active">algo</td>
-        <td class="active">algo2</td>
-        <td class="active">algo</td>
+        <td class="active">Detalle</td>
+        <td class="active">M-699</td>
+        <td class="active">M-499</td>
+        <td class="active">BIG 699</td>
+        <td class="active">Twin 699</td>
+        <td class="active">ACCION</td>
       </tr>
       <tr>
         <td class="warning">algo3</td>
@@ -17,7 +18,32 @@
         <td class="warning">algo3</td>
         <td class="warning">algo3</td>
         <td class="warning">algo3</td>
+        <td class="active"><button type="button" class="btn btn-danger">Borrar</button></td>
       </tr>
     </table>
   </div>
-</div>
+
+  <div class="input-group">
+    <span class="input-group-addon" id="basic-addon1">Detalle</span>
+    <input type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon1">
+  </div>
+
+  <div class="input-group">
+    <span class="input-group-addon" id="basic-addon2">Caract M-4</span>
+    <input type="text" class="form-control" placeholder="Recipient's username" aria-describedby="basic-addon2">
+  </div>
+
+  <div class="input-group">
+    <span class="input-group-addon">Caract M-699</span>
+    <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+  </div>
+  <div class="input-group">
+    <span class="input-group-addon" id="basic-addon3">Caract BIG 699</span>
+    <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+  </div>
+  <div class="input-group">
+    <span class="input-group-addon" id="basic-addon3">Caract Twin 699</span>
+    <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+  </div>
+  <!-- Indicates a successful or positive action -->
+  <button id="cargar" type="button" class="btn btn-success col-md-12">Cargar</button>
