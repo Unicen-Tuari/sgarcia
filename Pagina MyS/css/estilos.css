@@ -1,4 +1,18 @@
-.fotosuperior{
-  background-image: url("../images/imagenHeader3.jpg");
-  background-size:cover;
-  }
+h3{
+  color:black;
+}
+p{
+  color: green;
+  font-size: 20px;
+}
+.container p{
+  color: black;
+}
+.cuerpoEmpresa{
+background: url("../images/fondopaginab.jpg") no-repeat ;
+background: teal;
+text-align: center;}
+
+.cuerpoEmpresa p{
+  text-align: justify;
+}
