@@ -32,7 +32,7 @@ function cargaretiqueta(etiqueta) {
 
 
 
-// /*
+ /*
   function CargarRenglon() {
   event.preventDefault();
   var grupo = 16;
@@ -93,5 +93,5 @@ function GenerarRenglones(info) {
     html += '</tr>';
     return html;
 };
-// */
+ */
 });
