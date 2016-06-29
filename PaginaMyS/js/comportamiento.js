@@ -1,15 +1,15 @@
 "use strict";
-$("#hom").on("click", handleClick("inicio"));
-$("#empresa").on("click", handleClick('empresa'));
-$("#maquinas").on("click", handleClick('maquinas'));
-$("#pag_embutidoras").on("click", handleClick('embutidora'));
-$("#pag_mixer").on("click", handleClick('mixers'));
-$("#pag_moledoras").on("click", handleClick('moledora'));
-$("#form_contacto").on("click", handleClick('contacto'));
+$("#hom").on("click", function(){handleClick("inicio")});
+$("#empresa").on("click", function(){handleClick('empresa')});
+$("#maquinas").on("click", function(){handleClick('maquinas')});
+$("#pag_embutidoras").on("click", function(){handleClick('embutidora')});
+$("#pag_mixer").on("click", function(){handleClick('mixers')});
+$("#pag_moledoras").on("click", function(){handleClick('moledora')});
+$("#form_contacto").on("click", function(){handleClick('contacto')});
 
 
 function handleClick(etiqueta) {
-    $("#contenido").html("<h1>Loading 1</h1>");
+    //$("#contenido").html("<h1>Loading 1</h1>");
     $.ajax("https://paginamys.herokuapp.com/PaginaMyS/HTML/"+etiqueta+".html",
           {
             error: function () {
