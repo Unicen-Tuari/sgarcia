@@ -75,7 +75,6 @@ function cargaretiqueta(etiqueta) {
         $('#aviso').addClass('alert-danger');
       }
     });
-  };
 function mostrarrenglon(info) {
   var renglon= GenerarRenglon(info)
   $("#tabla_caract").html(renglon);
@@ -92,6 +91,7 @@ function GenerarRenglones(info) {
     html += '<td class="active"><button type="button" class="btn btn-danger">Borrar</button></td>'
     html += '</tr>';
     return html;
+};
 };
 // */
 });
