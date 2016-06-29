@@ -1,19 +1,13 @@
 "use strict";
-$("#hom").on("click", function(){handleClick("inicio")});
-$("#empresa").on("click", function(){handleClick('empresa')});
-$("#maquinas").on("click", function(){handleClick('maquinas')});
-$("#pag_embutidoras").on("click", function(){handleClick('embutidora')});
-$("#pag_mixer").on("click", function(){handleClick('mixers')});
-$("#pag_moledoras").on("click", function(){handleClick('moledora')});
-$("#form_contacto").on("click", function(){handleClick('contacto')});
-
+$(document).ready(function(){
+handleClick("inicio");
 
 function handleClick(etiqueta) {
     //$("#contenido").html("<h1>Loading 1</h1>");
-    $.ajax("https://paginamys.herokuapp.com/PaginaMyS/HTML/"+etiqueta+".html",
-          {
+    $.ajax({
+            url:"https://paginamys.herokuapp.com/PaginaMyS/HTML/"+etiqueta+".html",
             error: function () {
-              alert("no cargo");
+            alert("no cargo");
             },
             dataType: "HTML",
             success: function (receivedData) {
@@ -25,3 +19,10 @@ function handleClick(etiqueta) {
           }
         );
   }
+  $("#empresa").on("click", function(){handleClick("empresa")});
+  $("#maquinas").on("click", function(){handleClick("maquinas")});
+  $("#pag_embutidoras").on("click", function(){handleClick("embutidora")});
+  $("#pag_mixer").on("click", function(){handleClick("mixers")});
+  $("#pag_moledoras").on("click", function(){handleClick("moledora")});
+  $("#form_contacto").on("click", function(){handleClick("contacto")});
+});
