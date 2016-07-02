@@ -76,9 +76,8 @@ function GenerarFila(caracteristica,id) {
   html += '<td>'+caracteristica.Caract_twin+'</td>';
   html += '<td><button type="button" id="'+id+'" class="btn btn-danger borrador">Borrar</button></td>'
   html += '</tr>';
+  $(".borrador").on("click",function(){alert(this.id)});
   return html;
 };
-$(".borrador").on("click",function(){alert(this.id)});
-
 //Cuando se carga el JS, se carga la tabla
 CargarCaracteristicasMaquinas();
