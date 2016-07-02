@@ -80,6 +80,5 @@ function GenerarFila(caracteristica,id) {
 };
 $(".borrador").on("click",function(){alert(this.id)});
 
-})
 //Cuando se carga el JS, se carga la tabla
 CargarCaracteristicasMaquinas();
