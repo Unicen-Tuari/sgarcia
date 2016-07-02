@@ -32,6 +32,7 @@ $("#btnGuardar").on("click",function(){
       data: JSON.stringify(info),
       success: function(resultData){
         $('.table tbody').append(GenerarFila(resultData.information['thing'],resultData.information[i]['_id']));
+        BotonEliminar();
         $('#alerta').html('Caracteristica agregada con exito!');
         $('#alerta').removeClass('hidden');
         $('#alerta').addClass('alert-success');
@@ -57,6 +58,7 @@ function CargarCaracteristicasMaquinas(){
         for (var i = 0; i < resultData.information.length; i++) {
               tabla.append(GenerarFila(resultData.information[i]['thing'],resultData.information[i]['_id']));
         }
+        BotonEliminar();
        },
       error:function(jqxml, status, errorThrown){
         alert('error');
@@ -75,8 +77,11 @@ function GenerarFila(caracteristica,id) {
   html += '<td>'+caracteristica.Caract_twin+'</td>';
   html += '<td><button type="button" id="'+id+'" class="btn btn-danger borrador">Borrar</button></td>'
   html += '</tr>';
-  $('.borrador').on("click",function(){alert(id)});
   return html;
 };
+// genera el boton eliminar
+function BotonEliminar(){
+$('borrador').on("click",function(){alert(this.attr("id"))});  
+}
 //Cuando se carga el JS, se carga la tabla
 CargarCaracteristicasMaquinas();
