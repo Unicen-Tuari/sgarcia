@@ -74,10 +74,12 @@ function GenerarFila(caracteristica,id) {
   html += '<td>'+caracteristica.Caract_699+'</td>';
   html += '<td>'+caracteristica.Caract_big+'</td>'
   html += '<td>'+caracteristica.Caract_twin+'</td>';
-  html += '<td><button type="button" id="'+id+'" class="btn btn-danger">Borrar</button></td>'
+  html += '<td><button type="button" id="'+id+'" class="btn btn-danger borrador">Borrar</button></td>'
   html += '</tr>';
   return html;
 };
+$(".borrador").on("click",function(){alert(this.id)});
 
+})
 //Cuando se carga el JS, se carga la tabla
 CargarCaracteristicasMaquinas();
