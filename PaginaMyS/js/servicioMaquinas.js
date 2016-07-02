@@ -76,9 +76,7 @@ function GenerarFila(caracteristica,id) {
   html += '<td>'+caracteristica.Caract_twin+'</td>';
   html += '<td><button type="button" id="'+id+'" class="btn btn-danger borrador">Borrar</button></td>'
   html += '</tr>';
-  var bot_borrar=$('.borrador');
-  for (var i = 0; i < bot_borrar.length; i++) {
-    eliminar(bot_borrar[i]);
+  eliminar($(button));
   }
   return html;
 };
