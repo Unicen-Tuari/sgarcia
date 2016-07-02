@@ -55,7 +55,7 @@ function CargarCaracteristicasMaquinas(){
       success: function(resultData){
         var tabla = $('.table tbody');
         for (var i = 0; i < resultData.information.length; i++) {
-              tabla.append(GenerarFila(resultData.information[i]['thing']));
+              tabla.append(GenerarFila(resultData.information[i]['thing'],resultData.information[i]['_id']));
         }
       },
       error:function(jqxml, status, errorThrown){
@@ -66,7 +66,7 @@ function CargarCaracteristicasMaquinas(){
 }
 
 //Genera el HTML Para crear una fila
-function GenerarFila(caracteristica) {
+function GenerarFila(caracteristica,id) {
   var html = "";
   html += '<tr>';
   html += '<td>'+caracteristica.Caract+'</td>';
@@ -74,7 +74,7 @@ function GenerarFila(caracteristica) {
   html += '<td>'+caracteristica.Caract_699+'</td>';
   html += '<td>'+caracteristica.Caract_big+'</td>'
   html += '<td>'+caracteristica.Caract_twin+'</td>';
-  html += '<td><button type="button" class="btn btn-danger">Borrar</button></td>'
+  html += '<td><button type="button" id="'+id+'" class="btn btn-danger">Borrar</button></td>'
   html += '</tr>';
   return html;
 };
