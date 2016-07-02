@@ -83,20 +83,24 @@ function GenerarFila(caracteristica,id) {
 function BotonEliminar(){
 var botones=$('.borrador');
 for (var i = 0; i < botones.length; i++) {
-  $(botones[i]).on("click",function(){borrarCaract($(this).attr("id"))});
+  $(botones[i]).on("click",function(){
+    alert($(this).attr("id"));
+    //borrarCaract($(this).attr("id"))
+  });
 }
 }
 
 function borrarCaract(id) {
+  var dato=id;
   $.ajax({
-    url:"http://web-unicen.herokuapp.com/api/delete/" + id,
+    url:"http://web-unicen.herokuapp.com/api/delete/" + dato,
     method:"DELETE",
     success: function(resultData){
       console.log(resultData);
       CargarCaracteristicasMaquinas();
     },
     error:function(jqxml, status, errorThrown){
-      alert('Error!');
+      alert('No se puede eliminar la linea');
       console.log(errorThrown);
     }
   });
