@@ -1,5 +1,5 @@
 $("#btnGuardar").on("click",function(){
-  event.preventDefault();
+//  event.preventDefault();
   var grupo = 16;
   var informacion = {
       Caract:"",
