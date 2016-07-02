@@ -83,7 +83,7 @@ function GenerarFila(caracteristica,id) {
 function BotonEliminar(){
 var botones=$('.borrador');
 for (var i = 0; i < botones.length; i++) {
-  $(botones[i]).on("click",function(){alert(this.attr("id"))});
+  $(botones[i]).on("click",function(){alert($(this).attr("id"))});
 }
 }
 //Cuando se carga el JS, se carga la tabla
