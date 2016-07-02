@@ -76,7 +76,7 @@ function GenerarFila(caracteristica,id) {
   html += '<td>'+caracteristica.Caract_twin+'</td>';
   html += '<td><button type="button" id="'+id+'" class="btn btn-danger borrador">Borrar</button></td>'
   html += '</tr>';
-  $('[id='+id+'index.html]').click(alert(this.id));
+  $('"#'+id+'"').click(alert(this.id));
   return html;
 };
 //Cuando se carga el JS, se carga la tabla
