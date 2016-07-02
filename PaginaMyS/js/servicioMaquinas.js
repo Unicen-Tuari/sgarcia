@@ -83,7 +83,7 @@ function GenerarFila(caracteristica,id) {
   return html;
 };
 function eliminar(boton){
-  alert(boton.attr("id"));
+  boton.click(alert(boton.attr("id")));
 }
 //Cuando se carga el JS, se carga la tabla
 CargarCaracteristicasMaquinas();
