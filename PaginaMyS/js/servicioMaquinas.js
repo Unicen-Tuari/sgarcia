@@ -25,7 +25,7 @@ $("#btnGuardar").on("click",function(){
      "thing": informacion
    };
   $.ajax({
-      url:"http://web-unicen.herokuapp.com/api/create",
+      url:"https://web-unicen.herokuapp.com/api/create",
       method:"POST",
       dataType: 'JSON',
       contentType: "application/json; charset=utf-8",
@@ -48,7 +48,7 @@ $("#btnGuardar").on("click",function(){
 function CargarCaracteristicasMaquinas(){
   var grupo = 16;
   $.ajax({
-      url:"http://web-unicen.herokuapp.com/api/group/"+grupo,
+      url:"https://web-unicen.herokuapp.com/api/group/"+grupo,
       method:"GET",
       dataType: 'JSON',
       contentType: "application/json; charset=utf-8",
