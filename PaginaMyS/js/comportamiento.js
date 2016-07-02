@@ -1,5 +1,5 @@
 "use strict";
-$(document).ready(function(){
+//$(document).ready(function(){
 cargaretiqueta("HTML/inicio.html");
 
 function cargaretiqueta(etiqueta) {
@@ -25,4 +25,4 @@ function cargaretiqueta(etiqueta) {
   $("#moledoras").on("click", function(){cargaretiqueta("HTML/moledora.html")});
   $("#contacto").on("click", function(){cargaretiqueta("HTML/contacto.html")});
   $("#tablas").on("click", function(){cargaretiqueta("HTML/tecnica.html")});
-});
+//});
