@@ -31,7 +31,7 @@ $("#btnGuardar").on("click",function(){
       contentType: "application/json; charset=utf-8",
       data: JSON.stringify(info),
       success: function(resultData){
-        $('.table tbody').append(GenerarFila(resultData.information['thing']));
+        $('.table tbody').append(GenerarFila(resultData.information['thing']resultData.information[i]['_id']));
         $('#alerta').html('Caracteristica agregada con exito!');
         $('#alerta').removeClass('hidden');
         $('#alerta').addClass('alert-success');
