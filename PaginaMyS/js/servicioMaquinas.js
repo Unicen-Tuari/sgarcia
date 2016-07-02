@@ -81,7 +81,7 @@ function GenerarFila(caracteristica,id) {
 };
 // genera el boton eliminar
 function BotonEliminar(){
-var botones=$('borrador');
+var botones=$('.borrador');
 for (var i = 0; i < botones.length; i++) {
   botones[i].on("click",function(){alert(this.attr("id"))});
 }
