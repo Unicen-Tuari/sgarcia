@@ -1,9 +1,6 @@
-"use strict";
-$(document).ready(function(){
-
 $("#btnGuardar").on("click",function(){
   event.preventDefault();
-  var grupo = 288;
+  var grupo = 41;
   var informacion = {
       Caract:"",
       Caract_499:"",
@@ -49,7 +46,7 @@ $("#btnGuardar").on("click",function(){
 
 //Obtiene del servicio las Caracteristicas de las maquinarias y las carga
 function CargarCaracteristicasMaquinas(){
-  var grupo = 288;
+  var grupo = 41;
   $.ajax({
       url:"http://web-unicen.herokuapp.com/api/group/"+grupo,
       method:"GET",
@@ -84,4 +81,3 @@ function GenerarFila(caracteristica) {
 
 //Cuando se carga el JS, se carga la tabla
 CargarCaracteristicasMaquinas();
-});
