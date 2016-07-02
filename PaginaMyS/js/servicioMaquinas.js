@@ -1,3 +1,6 @@
+"use strict";
+$(document).ready(function(){
+
 $("#btnGuardar").on("click",function(){
   event.preventDefault();
   var grupo = 288;
@@ -81,3 +84,4 @@ function GenerarFila(caracteristica) {
 
 //Cuando se carga el JS, se carga la tabla
 CargarCaracteristicasMaquinas();
+});
