@@ -1,6 +1,6 @@
 "use strict";
-//$(document).ready(function(){
-//cargaretiqueta("HTML/inicio.html");
+$(document).ready(function(){
+cargaretiqueta("HTML/inicio.html");
 
 function cargaretiqueta(etiqueta) {
    //event.preventDefault();
@@ -26,5 +26,4 @@ function cargaretiqueta(etiqueta) {
   $("#contacto").on("click", function(){cargaretiqueta("HTML/contacto.html")});
   $("#tablas").on("click", function(){cargaretiqueta("HTML/tecnica.html")});
 
-  cargaretiqueta("HTML/inicio.html");
-//});
+});
