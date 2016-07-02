@@ -3,7 +3,7 @@
 //cargaretiqueta("HTML/inicio.html");
 
 function cargaretiqueta(etiqueta) {
-   event.preventDefault();
+   //event.preventDefault();
     $.ajax({
             method: "GET",
             url:etiqueta,
