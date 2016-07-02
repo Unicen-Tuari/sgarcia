@@ -31,7 +31,7 @@ $("#btnGuardar").on("click",function(){
       contentType: "application/json; charset=utf-8",
       data: JSON.stringify(info),
       success: function(resultData){
-        $('.table tbody').append(GenerarFila(resultData.information['thing']resultData.information[i]['_id']));
+        $('.table tbody').append(GenerarFila(resultData.information['thing'],resultData.information[i]['_id']));
         $('#alerta').html('Caracteristica agregada con exito!');
         $('#alerta').removeClass('hidden');
         $('#alerta').addClass('alert-success');
@@ -57,12 +57,11 @@ function CargarCaracteristicasMaquinas(){
         for (var i = 0; i < resultData.information.length; i++) {
               tabla.append(GenerarFila(resultData.information[i]['thing'],resultData.information[i]['_id']));
         }
-      },
+       },
       error:function(jqxml, status, errorThrown){
         alert('error');
       }
     });
-
 }
 
 //Genera el HTML Para crear una fila
