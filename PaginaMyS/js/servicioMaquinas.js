@@ -76,8 +76,6 @@ function GenerarFila(caracteristica,id) {
   html += '<td>'+caracteristica.Caract_twin+'</td>';
   html += '<td><button type="button" id="'+id+'" class="btn btn-danger borrador">Borrar</button></td>'
   html += '</tr>';
-  var boton=$("'#"+id+"'");
-  eliminar(boton);
   }
   return html;
 };
