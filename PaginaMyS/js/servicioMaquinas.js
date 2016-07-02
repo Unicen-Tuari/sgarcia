@@ -81,7 +81,9 @@ function GenerarFila(caracteristica,id) {
 };
 // genera el boton eliminar
 function BotonEliminar(){
-$('borrador').on("click",function(){alert(this.attr("id"))});  
+var botones=$('borrador');
+for (var i = 0; i < botones.length; i++) {
+  botones[i].on("click",function(){alert(this.attr("id"))});  
 }
 //Cuando se carga el JS, se carga la tabla
 CargarCaracteristicasMaquinas();
