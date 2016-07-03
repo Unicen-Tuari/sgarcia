@@ -1,9 +1,8 @@
-$(function(){
-    $("#formuploadajax").on("submit", function(e){
+$("#formuploadajax").on("submit", function(e){
         e.preventDefault();
         var f = $(this);
         var formData = new FormData(document.getElementById("formuploadajax"));
-        formData.append("dato", "valor");
+        //formData.append("dato", "valor");
         //formData.append(f.attr("name"), $(this)[0].files[0]);
         $.ajax({
             url: "recibe.php",
@@ -18,30 +17,29 @@ $(function(){
                 $("#mensaje").html("Respuesta: " + res);
             });
     });
-});
-
 
 $("#btnGuardar").on("click",function(){
 //  event.preventDefault();
-  var grupo = 116;
-  var informacionGral = {
-      Tipo:"",
-      Datos: infousados
+  var grupo = 16;
+  var informacion = {
+      Caract:"",
+      Caract_499:"",
+      Caract_699:"",
+      Caract_big:"",
+      Caract_twin:""
   };
-  var infousados = {
-      imagen:"",
-      maquina:"",
-      marca:"",
-      modelo:"",
-      email:"",
-      tel:""
-  };
-
-   informacionGral.infousados.imagen=datos[0].value;
-   informacionGral.infousados.imagen=datos[1].value;
-   informacionGral.infousados.imagen=datos[2].value;
-   informacionGral.infousados.imagen=datos[3].value;
-   informacionGral.infousados.imagen=datos[4].value;
+   var datos =$('.dato');
+   for (var i = 0; i < datos.length; i++) {
+     if (datos[i].value == "") {
+       alert('Debe llenar todos los campos');
+       return;
+     }
+   }
+   informacion.Caract=datos[0].value;
+   informacion.Caract_499=datos[1].value;
+   informacion.Caract_699=datos[2].value;
+   informacion.Caract_big=datos[3].value;
+   informacion.Caract_twin=datos[4].value;
    var info = {
      "group": grupo,
      "thing": informacion
