@@ -1,5 +1,5 @@
-$("#subir").on("click", function(e){
-        e.preventDefault();
+$("#subir").on("click", function(){
+        //e.preventDefault();
         var grupo=166;
         //var f = $(this);
         var formData = new FormData(document.getElementById("formuploadajax"));
