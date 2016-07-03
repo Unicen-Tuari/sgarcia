@@ -33,7 +33,7 @@ $("#btnGuardar").on("click",function(){
       success: function(resultData){
         $('.table tbody').append(GenerarFila(resultData.information['thing'],resultData.information['_id']));
         BotonEliminar();
-        $('#alerta').html('Caracteristica eliminada con exito!');
+        $('#alerta').html('Caracteristica agregada con exito!');
         $('#alerta').removeClass('hidden');
         $('#alerta').addClass('alert-success');
       },
@@ -93,7 +93,7 @@ function borrarCaract(id) {
     method:"DELETE",
     success: function(resultData){
       console.log(resultData);
-      $('#alerta').html('Caracteristica agregada con exito!');
+      $('#alerta').html('Caracteristica eliminada con exito!');
       $('#alerta').removeClass('hidden');
       $('#alerta').addClass('alert-danger');
       },
