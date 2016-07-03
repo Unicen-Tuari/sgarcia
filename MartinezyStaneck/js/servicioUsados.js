@@ -11,7 +11,6 @@ $("#Btcarga").on("click",function(){
       tel:""
   };
    var datos =$('.dato');
-
    informacion.maquina=datos[0].value;
    informacion.marca=datos[1].value;
    informacion.modelo=datos[2].value;
