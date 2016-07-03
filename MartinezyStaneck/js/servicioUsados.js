@@ -1,3 +1,4 @@
+$(document).ready(function(){
 function cargadorusados(etiqueta) {
    //event.preventDefault();
     $.ajax({
@@ -13,6 +14,7 @@ function cargadorusados(etiqueta) {
           }
         );
   }
+});
 
 $("#Btcarga").on("click", function(){cargadorusados("HTML/cargausados.html")});
 
