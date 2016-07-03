@@ -1,55 +1,22 @@
-$("#subir").on("click", function(){
-        //e.preventDefault();
-        var grupo=166;
-        //var f = $(this);
-        var formData = new FormData(document.getElementById("formuploadajax"));
-        var info = {
-          "group": grupo,
-          "thing": formData
-        };
-
-        //formData.append("dato", "valor");
-        //formData.append(f.attr("name"), $(this)[0].files[0]);
-        $.ajax({
-            url:"https://web-unicen.herokuapp.com/api/create",
-            type: "post",
-            dataType: "JSON",
-            contentType: "application/json; charset=utf-8",
-            data: JSON.stringify(info),
-            cache: false,
-            processData: false,
-            success: function(resultData){
-              alert("foto cargada")
-            },
-            error:function(jqxml, status, errorThrown){
-              alert("foto no cargada")
-            }
-
-          });
-    });
-
-$("#btnGuardar").on("click",function(){
+$("#Btcarga").on("click",function(){
 //  event.preventDefault();
-  var grupo = 16;
+  var grupo = 166;
+  var formData = new FormData(document.getElementById("formuploadajax"));
   var informacion = {
-      Caract:"",
-      Caract_499:"",
-      Caract_699:"",
-      Caract_big:"",
-      Caract_twin:""
+      imagen: formData,
+      maquina:"",
+      marca:"",
+      modelo:"",
+      email:"",
+      tel:""
   };
    var datos =$('.dato');
-   for (var i = 0; i < datos.length; i++) {
-     if (datos[i].value == "") {
-       alert('Debe llenar todos los campos');
-       return;
-     }
-   }
-   informacion.Caract=datos[0].value;
-   informacion.Caract_499=datos[1].value;
-   informacion.Caract_699=datos[2].value;
-   informacion.Caract_big=datos[3].value;
-   informacion.Caract_twin=datos[4].value;
+
+   informacion.maquina=datos[0].value;
+   informacion.marca=datos[1].value;
+   informacion.modelo=datos[2].value;
+   informacion.email=datos[3].value;
+   informacion.tel=datos[4].value;
    var info = {
      "group": grupo,
      "thing": informacion
