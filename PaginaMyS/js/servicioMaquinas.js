@@ -94,6 +94,7 @@ function borrarCaract(id) {
     method:"DELETE",
     success: function(resultData){
       console.log(resultData);
+      alert('se borro');
       CargarCaracteristicasMaquinas();
     },
     error:function(jqxml, status, errorThrown){
