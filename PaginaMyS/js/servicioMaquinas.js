@@ -31,6 +31,7 @@ $("#btnGuardar").on("click",function(){
       contentType: "application/json; charset=utf-8",
       data: JSON.stringify(info),
       success: function(resultData){
+
         $('.table tbody').append(GenerarFila(resultData.information['thing'],resultData.information['_id']));
         BotonEliminar();
         $('#alerta').html('Caracteristica agregada con exito!');
@@ -55,6 +56,7 @@ function CargarCaracteristicasMaquinas(){
       contentType: "application/json; charset=utf-8",
       success: function(resultData){
         var tabla = $('.table tbody');
+        tabla.html("");
         for (var i = 0; i < resultData.information.length; i++) {
               tabla.append(GenerarFila(resultData.information[i]['thing'],resultData.information[i]['_id']));
         }
@@ -83,7 +85,6 @@ function GenerarFila(caracteristica,id) {
 function BotonEliminar(){
 $('.borrador').on("click",function(){
     borrarCaract($(this).attr("id"))
-    $('.table tbody').html("");
     CargarCaracteristicasMaquinas();
   });
 }
