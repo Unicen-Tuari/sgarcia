@@ -89,12 +89,12 @@ var botones=$('.borrador');
 }
 function borrarCaract(id) {
   var dato=id;
+  alert('entro con '+id);
   $.ajax({
     url:"http://web-unicen.herokuapp.com/api/delete/" + dato,
     method:"DELETE",
     success: function(resultData){
       console.log(resultData);
-      alert('se borro');
       CargarCaracteristicasMaquinas();
     },
     error:function(jqxml, status, errorThrown){
