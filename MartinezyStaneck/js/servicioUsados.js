@@ -1,18 +1,24 @@
-$("#formuploadajax").on("submit", function(e){
+$("#subir").on("click", function(e){
         e.preventDefault();
-        var f = $(this);
+        var grupo=116;
+        //var f = $(this);
         var formData = new FormData(document.getElementById("formuploadajax"));
+        var info = {
+          "group": grupo,
+          "thing": formData
+        };
+
         //formData.append("dato", "valor");
         //formData.append(f.attr("name"), $(this)[0].files[0]);
         $.ajax({
-            url: "recibe.php",
+            url:"https://web-unicen.herokuapp.com/api/create",
             type: "post",
-            dataType: "html",
-            data: formData,
+            dataType: "JSON",
+            contentType: "application/json; charset=utf-8",
+            data: JSON.stringify(info),
             cache: false,
-            contentType: false,
-   processData: false
-        })
+            processData: false
+            })
             .done(function(res){
                 $("#mensaje").html("Respuesta: " + res);
             });
