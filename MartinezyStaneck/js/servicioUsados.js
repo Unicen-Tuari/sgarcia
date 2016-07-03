@@ -17,11 +17,15 @@ $("#subir").on("click", function(e){
             contentType: "application/json; charset=utf-8",
             data: JSON.stringify(info),
             cache: false,
-            processData: false
-            })
-            .done(function(res){
-                $("#mensaje").html("Respuesta: " + res);
-            });
+            processData: false,
+            success: function(resultData){
+              alert("foto cargada")
+            },
+            error:function(jqxml, status, errorThrown){
+              alert("foto no cargada")
+            }
+
+          });
     });
 
 $("#btnGuardar").on("click",function(){
