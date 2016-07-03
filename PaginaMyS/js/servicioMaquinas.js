@@ -83,6 +83,7 @@ function GenerarFila(caracteristica,id) {
 function BotonEliminar(){
 $('.borrador').on("click",function(){
     borrarCaract($(this).attr("id"))
+    $('.table tbody').html("");
     CargarCaracteristicasMaquinas();
   });
 }
