@@ -31,8 +31,8 @@ $("#btnGuardar").on("click",function(){
       contentType: "application/json; charset=utf-8",
       data: JSON.stringify(info),
       success: function(resultData){
-        $('.table tbody').append(GenerarFila(resultData.information['thing']));
-        BotonEliminar(resultData.information['_id']);
+        $('.table tbody').append(GenerarFila(resultData.information['thing'],resultData.information['_id']));
+        BotonEliminar();
         $('#alerta').html('Caracteristica agregada con exito!');
         $('#alerta').removeClass('hidden');
         $('#alerta').addClass('alert-success');
@@ -56,9 +56,9 @@ function CargarCaracteristicasMaquinas(){
       success: function(resultData){
         var tabla = $('.table tbody');
         for (var i = 0; i < resultData.information.length; i++) {
-              tabla.append(GenerarFila(resultData.information[i]['thing']));
+              tabla.append(GenerarFila(resultData.information[i]['thing'],resultData.information[i]['_id']));
         }
-        BotonEliminar(resultData.information['_id']);
+        BotonEliminar();
        },
       error:function(jqxml, status, errorThrown){
         alert('error');
@@ -67,7 +67,7 @@ function CargarCaracteristicasMaquinas(){
 }
 
 //Genera el HTML Para crear una fila
-function GenerarFila(caracteristica) {
+function GenerarFila(caracteristica,id) {
   var html = "";
   html += '<tr>';
   html += '<td>'+caracteristica.Caract+'</td>';
@@ -75,17 +75,17 @@ function GenerarFila(caracteristica) {
   html += '<td>'+caracteristica.Caract_699+'</td>';
   html += '<td>'+caracteristica.Caract_big+'</td>'
   html += '<td>'+caracteristica.Caract_twin+'</td>';
-  html += '<td><button type="button" class="btn btn-danger borrador">Borrar</button></td>'
+  html += '<td><button type="button" id="'+id+'" class="btn btn-danger borrador">Borrar</button></td>'
   html += '</tr>';
   return html;
 };
 // genera el boton eliminar
-function BotonEliminar(id){
+function BotonEliminar(){
 var botones=$('.borrador');
 for (var i = 0; i < botones.length; i++) {
   $(botones[i]).on("click",function(){
-    alert(id);
-    //borrarCaract($(this).attr("id"))
+    alert($(this).attr("id"));
+    borrarCaract($(this).attr("id"))
   });
 }
 }
