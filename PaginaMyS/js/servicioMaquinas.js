@@ -59,7 +59,7 @@ function CargarCaracteristicasMaquinas(){
       //  tabla.html("");
       //  for (var i = 0; i < resultData.information.length; i++) {
       //        tabla.append(GenerarFila(resultData.information[i]['thing'],resultData.information[i]['_id']));
-        GenerarFila(resultData.information[i]['thing'],resultData.information[i]['_id'])
+        GenerarFila(resultData)
       //  }
         BotonEliminar();
        },
@@ -70,16 +70,17 @@ function CargarCaracteristicasMaquinas(){
 }
 
 //Genera el HTML Para crear una fila
-function GenerarFila(caracteristicas,id) {
+function GenerarFila(info) {
+  caracteristicas=info.information;
   var html = "";
   for (var i = 0; i < caracteristicas.length; i++){
   html += '<tr>';
-  html += '<td>'+caracteristicas[i].Caract+'</td>';
-  html += '<td>'+caracteristicas[i].Caract_499+'</td>';
-  html += '<td>'+caracteristicas[i].Caract_699+'</td>';
-  html += '<td>'+caracteristicas[i].Caract_big+'</td>'
-  html += '<td>'+caracteristicas[i].Caract_twin+'</td>';
-  html += '<td><button type="button" id="'+id+'" class="btn btn-danger borrador">Borrar</button></td>'
+  html += '<td>'+caracteristicas[i]['thing'].Caract+'</td>';
+  html += '<td>'+caracteristicas[i]['thing'].Caract_499+'</td>';
+  html += '<td>'+caracteristicas[i]['thing'].Caract_699+'</td>';
+  html += '<td>'+caracteristicas[i]['thing'].Caract_big+'</td>'
+  html += '<td>'+caracteristicas[i]['thing'].Caract_twin+'</td>';
+  html += '<td><button type="button" id="'+caracteristicas[i]['_id']+'" class="btn btn-danger borrador">Borrar</button></td>'
   html += '</tr>';
   }
   $('.table tbody').html(html);
