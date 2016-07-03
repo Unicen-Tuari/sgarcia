@@ -57,6 +57,7 @@ function CargarCaracteristicasMaquinas(){
         var tabla = $('.table tbody');
         for (var i = 0; i < resultData.information.length; i++) {
               tabla.append(GenerarFila(resultData.information[i]['thing'],resultData.information[i]['_id']));
+              alert(resultData.information[i]['_id']);
         }
         BotonEliminar();
        },
@@ -80,15 +81,13 @@ function GenerarFila(caracteristica,id) {
   return html;
 };
 // genera el boton eliminar
-function BotonEliminar(indice){
+function BotonEliminar(){
 $('.borrador').on("click",function(){
-    alert($(this).attr("id"));
     borrarCaract($(this).attr("id"))
   });
 }
 function borrarCaract(id) {
   var dato=id;
-  alert('entro con '+id);
   $.ajax({
     url:"http://web-unicen.herokuapp.com/api/delete/" + dato,
     method:"DELETE",
