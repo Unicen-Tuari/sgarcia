@@ -57,7 +57,6 @@ function CargarCaracteristicasMaquinas(){
         var tabla = $('.table tbody');
         for (var i = 0; i < resultData.information.length; i++) {
               tabla.append(GenerarFila(resultData.information[i]['thing'],resultData.information[i]['_id']));
-              alert(resultData.information[i]['_id']);
         }
         BotonEliminar();
        },
@@ -84,19 +83,18 @@ function GenerarFila(caracteristica,id) {
 function BotonEliminar(){
 $('.borrador').on("click",function(){
     borrarCaract($(this).attr("id"))
+    CargarCaracteristicasMaquinas();
   });
 }
 function borrarCaract(id) {
-  var dato=id;
   $.ajax({
-    url:"http://web-unicen.herokuapp.com/api/delete/" + dato,
+    url:"http://web-unicen.herokuapp.com/api/delete/"+id,
     method:"DELETE",
     success: function(resultData){
       console.log(resultData);
-      CargarCaracteristicasMaquinas();
-    },
+      },
     error:function(jqxml, status, errorThrown){
-      alert('No se puede eliminar la linea');
+      alert('No se puede eliminar la linea'+id);
       console.log(errorThrown);
     }
   });
