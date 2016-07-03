@@ -17,7 +17,7 @@ function cargadorusados(etiqueta) {
 });
 
 $("#Btcarga").on("click", function(){alert("entro");
-  cargadorusados("HTML/cargausados.html")});
+  cargadorusados("../HTML/cargausados.html")});
 
 $(function(){
     $("#formuploadajax").on("submit", function(e){
