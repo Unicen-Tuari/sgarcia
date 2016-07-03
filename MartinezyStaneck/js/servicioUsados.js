@@ -1,3 +1,44 @@
+function cargadorusados(etiqueta) {
+   //event.preventDefault();
+    $.ajax({
+            method: "GET",
+            url:etiqueta,
+            error: function () {
+                    alert("no cargo");
+                    },
+            dataType: "HTML",
+            success: function (receivedData) {
+              $("#cargador").html(receivedData);
+            },
+          }
+        );
+  }
+
+$("#Btcarga").on("click", function(){cargadorusados("HTML/cargausados.html")});
+
+$(function(){
+    $("#formuploadajax").on("submit", function(e){
+        e.preventDefault();
+        var f = $(this);
+        var formData = new FormData(document.getElementById("formuploadajax"));
+        formData.append("dato", "valor");
+        //formData.append(f.attr("name"), $(this)[0].files[0]);
+        $.ajax({
+            url: "recibe.php",
+            type: "post",
+            dataType: "html",
+            data: formData,
+            cache: false,
+            contentType: false,
+   processData: false
+        })
+            .done(function(res){
+                $("#mensaje").html("Respuesta: " + res);
+            });
+    });
+});
+
+
 $("#btnGuardar").on("click",function(){
 //  event.preventDefault();
   var grupo = 116;
@@ -104,4 +145,4 @@ function borrarCaract(id) {
 }
 
 //Cuando se carga el JS, se carga la tabla
-CargarCaracteristicasMaquinas();
+//CargarCaracteristicasMaquinas();
