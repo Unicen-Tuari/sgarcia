@@ -13,4 +13,4 @@ function cargausados(etiqueta) {
           }
         );
   }
-$("#Btcarga").on("click", function(){cargausados("../HTML/cargausados.html")});
+$("#Btcarga").on("click", function(){cargausados("HTML/cargausados.html")});
