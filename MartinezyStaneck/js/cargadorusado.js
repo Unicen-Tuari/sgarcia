@@ -8,7 +8,7 @@ function cargausados(etiqueta) {
                     },
             dataType: "HTML",
             success: function (receivedData) {
-              $("#cargador").html(receivedData);
+              $("#cargador tbody").html(receivedData);
             },
           }
         );
