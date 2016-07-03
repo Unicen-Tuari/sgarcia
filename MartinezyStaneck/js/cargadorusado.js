@@ -1,6 +1,4 @@
-"use strict";
-$(document).ready(function(){
-function cargadorusados(etiqueta) {
+function cargausados(etiqueta) {
    //event.preventDefault();
     $.ajax({
             method: "GET",
@@ -15,5 +13,4 @@ function cargadorusados(etiqueta) {
           }
         );
   }
-$("#Btcarga").on("click", function(){cargadorusados("HTML/cargausados.html")});
-});
+$("#Btcarga").on("click", function(){cargausados("../HTML/cargausados.html")});
