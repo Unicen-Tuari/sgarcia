@@ -32,7 +32,7 @@ $("#btnGuardar").on("click",function(){
       data: JSON.stringify(info),
       success: function(resultData){
         $('.table tbody').append(GenerarFila(resultData.information['thing'],resultData.information['_id']));
-        //BotonEliminar();
+        BotonEliminar();
         $('#alerta').html('Caracteristica agregada con exito!');
         $('#alerta').removeClass('hidden');
         $('#alerta').addClass('alert-success');
