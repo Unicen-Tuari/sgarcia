@@ -31,9 +31,9 @@ $("#btnGuardar").on("click",function(){
       contentType: "application/json; charset=utf-8",
       data: JSON.stringify(info),
       success: function(resultData){
-
-        $('.table tbody').append(GenerarFila(resultData.information['thing'],resultData.information['_id']));
-        BotonEliminar();
+        //$('.table tbody').append(GenerarFila(resultData.information['thing'],resultData.information['_id']));
+        CargarCaracteristicasMaquinas();
+        //BotonEliminar();
         $('#alerta').html('Caracteristica agregada con exito!');
         $('#alerta').removeClass('hidden');
         $('#alerta').addClass('alert-success');
@@ -55,11 +55,12 @@ function CargarCaracteristicasMaquinas(){
       dataType: 'JSON',
       contentType: "application/json; charset=utf-8",
       success: function(resultData){
-        var tabla = $('.table tbody');
-        tabla.html("");
-        for (var i = 0; i < resultData.information.length; i++) {
-              tabla.append(GenerarFila(resultData.information[i]['thing'],resultData.information[i]['_id']));
-        }
+        //var tabla = $('.table tbody');
+      //  tabla.html("");
+      //  for (var i = 0; i < resultData.information.length; i++) {
+      //        tabla.append(GenerarFila(resultData.information[i]['thing'],resultData.information[i]['_id']));
+        GenerarFila(resultData.information[i]['thing'],resultData.information[i]['_id'])
+      //  }
         BotonEliminar();
        },
       error:function(jqxml, status, errorThrown){
@@ -69,17 +70,19 @@ function CargarCaracteristicasMaquinas(){
 }
 
 //Genera el HTML Para crear una fila
-function GenerarFila(caracteristica,id) {
+function GenerarFila(caracteristicas,id) {
   var html = "";
+  for (var i = 0; i < caracteristicas.length; i++){
   html += '<tr>';
-  html += '<td>'+caracteristica.Caract+'</td>';
-  html += '<td>'+caracteristica.Caract_499+'</td>';
-  html += '<td>'+caracteristica.Caract_699+'</td>';
-  html += '<td>'+caracteristica.Caract_big+'</td>'
-  html += '<td>'+caracteristica.Caract_twin+'</td>';
+  html += '<td>'+caracteristicas[i].Caract+'</td>';
+  html += '<td>'+caracteristicas[i].Caract_499+'</td>';
+  html += '<td>'+caracteristicas[i].Caract_699+'</td>';
+  html += '<td>'+caracteristicas[i].Caract_big+'</td>'
+  html += '<td>'+caracteristicas[i].Caract_twin+'</td>';
   html += '<td><button type="button" id="'+id+'" class="btn btn-danger borrador">Borrar</button></td>'
   html += '</tr>';
-  return html;
+  }
+  $('.table tbody').html(html);
 };
 // genera el boton eliminar
 function BotonEliminar(){
