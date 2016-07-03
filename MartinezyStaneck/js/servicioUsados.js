@@ -13,7 +13,7 @@ $("#btnGuardar").on("click",function(){
       email:"",
       tel:""
   };
-  
+
    informacionGral.infousados.imagen=datos[0].value;
    informacionGral.infousados.imagen=datos[1].value;
    informacionGral.infousados.imagen=datos[2].value;
