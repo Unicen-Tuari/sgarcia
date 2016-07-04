@@ -12,7 +12,7 @@ $("#btncargar").on("click",function(){
               }
            }
         }
-    };
+    });
   var informacion = {
       imagen:"",
       maquina:"",
