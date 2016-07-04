@@ -28,6 +28,7 @@ $("#btncargar").on("click",function(){
       data: JSON.stringify(info),
       success: function(resultData){
         alert("cargado")
+        $('.tableusado tbody').append(GenerarFila(resultData.information['thing'],resultData.information['_id']));
         BotonEliminarUsado();
       },
       error:function(jqxml, status, errorThrown){
