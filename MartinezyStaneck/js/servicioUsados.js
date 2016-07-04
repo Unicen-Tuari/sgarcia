@@ -1,4 +1,4 @@
-$("#btcargar").on("click",function(){
+$("#btncargar").on("click",function(){
   //event.preventDefault();
   var grupo = 166;
   //var formData = new FormData(document.getElementById("formuploadajax"));
