@@ -1,5 +1,6 @@
 $("#Btcarga").on("click",function(){
 //  event.preventDefault();
+ alert("naad");
   var grupo = 166;
   var formData = new FormData(document.getElementById("formuploadajax"));
   var informacion = {
@@ -44,7 +45,7 @@ function CargarCaracteristicasMaquinas(){
       dataType: 'JSON',
       contentType: "application/json; charset=utf-8",
       success: function(resultData){
-        var tabla = $('.table tbody');
+        var tabla = $('.tableusado tbody');
         tabla.html("");
         for (var i = 0; i < resultData.information.length; i++) {
               tabla.append(GenerarFila(resultData.information[i]['thing'],resultData.information[i]['_id']));
@@ -60,12 +61,11 @@ function CargarCaracteristicasMaquinas(){
 //Genera el HTML Para crear una fila
 function GenerarFila(caracteristica,id) {
   var html = "";
-  html += '<tr>';
-  html += '<td>'+caracteristica.Caract+'</td>';
-  html += '<td>'+caracteristica.Caract_499+'</td>';
-  html += '<td>'+caracteristica.Caract_699+'</td>';
-  html += '<td>'+caracteristica.Caract_big+'</td>'
-  html += '<td>'+caracteristica.Caract_twin+'</td>';
+  html += '<tr><td>'+caracteristica.Caract+'</td></tr>';
+  html += '<tr><td>'+caracteristica.Caract_499+'</td></tr>';
+  html += '<tr><td>'+caracteristica.Caract_699+'</td></tr>';
+  html += '<tr><td>'+caracteristica.Caract_big+'</td></tr>'
+  html += '<tr><td>'+caracteristica.Caract_twin+'</td></tr>';
   html += '<td><button type="button" id="'+id+'" class="btn btn-danger borrador">Borrar</button></td>'
   html += '</tr>';
   return html;
