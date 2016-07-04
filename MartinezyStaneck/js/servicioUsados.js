@@ -1,9 +1,20 @@
 $("#btncargar").on("click",function(){
   //event.preventDefault();
   var grupo = 166;
-  var formData = new FormData(document.getElementById("formuploadajax"));
+  var formulario = new FormData();
+  $('#formcarga').find(':input').each(function() {
+       var elemento= this;
+       if(elemento.type === 'file'){
+           if(elemento.value !== ''){
+              var file_data = $('input[type="file"]')[0].files;
+              for (var i = 0; i < file_data.length; i++) {
+                 Formulario.append(elemento.name, file_data[i]);
+              }
+           }
+        }
+    };
   var informacion = {
-      imagen:formData,
+      imagen:"",
       maquina:"",
       marca:"",
       modelo:"",
@@ -11,6 +22,7 @@ $("#btncargar").on("click",function(){
       tel:""
   };
    var datos =$('.dato');
+   informacion.imagen=
    informacion.maquina=datos[0].value;
    informacion.marca=datos[1].value;
    informacion.modelo=datos[2].value;
