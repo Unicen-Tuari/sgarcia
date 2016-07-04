@@ -76,7 +76,7 @@ function GenerarFila(caracteristica,id) {
   var html = "";
   html += '<tr>';
   html += '<th>imagen</th>';
-  html += '<th>'+caracteristica.imagen[_FILES]+'</th>';
+  html += '<th>'+caracteristica.imagen+'</th>';
   html += '</tr>';
   html += '<tr>';
   html += '<th>Maquina</th>';
