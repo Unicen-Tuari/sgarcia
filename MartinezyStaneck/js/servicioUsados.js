@@ -1,9 +1,9 @@
 $("#Btcarga").on("click",function(){
 //  event.preventDefault();
   var grupo = 166;
-  var formData = new FormData(document.getElementById("formuploadajax"));
+  //var formData = new FormData(document.getElementById("formuploadajax"));
   var informacion = {
-      imagen: formData,
+      imagen:"foto", //formData,
       maquina:"",
       marca:"",
       modelo:"",
