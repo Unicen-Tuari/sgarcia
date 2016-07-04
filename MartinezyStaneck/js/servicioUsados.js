@@ -61,6 +61,7 @@ function CargarMaqUsadas(){
 //Genera el HTML Para crear una fila
 function GenerarFila(caracteristica,id) {
   var html = "";
+  html += '<tr>';
   html += '<th><tr>Maquina</tr></th>';
   html += '<th><tr>'+caracteristica.maquina+'</tr></th>';
   html += '<th><tr>Marca</tr></th>';
@@ -71,7 +72,7 @@ function GenerarFila(caracteristica,id) {
   html += '<th><tr>'+caracteristica.email+'</tr></th>';
   html += '<th><tr>Telefono contacto</tr></th>';
   html += '<th><tr>'+caracteristica.tel+'</tr></th>';
-  html += '<td><button type="button" id="'+id+'" class="btn btn-danger borrador">Borrar</button></td>'
+  html += '<th><button type="button" id="'+id+'" class="btn btn-danger borrador">Borrar</button></th>'
   html += '</tr>';
   return html;
 };
