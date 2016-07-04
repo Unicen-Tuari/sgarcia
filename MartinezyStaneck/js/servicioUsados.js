@@ -62,17 +62,26 @@ function CargarMaqUsadas(){
 function GenerarFila(caracteristica,id) {
   var html = "";
   html += '<tr>';
-  html += '<th><tr>Maquina</tr></th>';
-  html += '<th><tr>'+caracteristica.maquina+'</tr></th>';
-  html += '<th><tr>Marca</tr></th>';
-  html += '<th><tr>'+caracteristica.marca+'</tr></th>';
-  html += '<th><tr>Modelo</tr></th>';
-  html += '<th><tr>'+caracteristica.modelo+'</tr></th>';
-  html += '<th><tr>e-mail</tr></th>';
-  html += '<th><tr>'+caracteristica.email+'</tr></th>';
-  html += '<th><tr>Telefono contacto</tr></th>';
-  html += '<th><tr>'+caracteristica.tel+'</tr></th>';
-  html += '<th><button type="button" id="'+id+'" class="btn btn-danger borrador">Borrar</button></th>'
+  html += '<th>Maquina</th>';
+  html += '<th>'+caracteristica.maquina+'</th>';
+  html += '</tr>';
+  html += '<tr>';
+  html += '<th>Marca</th>';
+  html += '<th>'+caracteristica.marca+'</th>';
+  html += '</tr>';
+  html += '<tr>';
+  html += '<th>Modelo</th>';
+  html += '<th>'+caracteristica.modelo+'</th>';
+  html += '</tr>';
+  html += '<tr>';
+  html += '<th>e-mail</th>';
+  html += '<th>'+caracteristica.email+'</th>';
+  html += '</tr>';
+  html += '<tr>';
+  html += '<th>Telefono contacto</th>';
+  html += '<th>'+caracteristica.tel+'</th>';
+  html += '</tr>';
+  html += '<tr><th><button type="button" id="'+id+'" class="btn btn-danger borrador">Borrar</button></th></tr>';
   html += '</tr>';
   return html;
 };
