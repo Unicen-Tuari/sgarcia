@@ -75,6 +75,10 @@ function CargarMaqUsadas(){
 function GenerarFila(caracteristica,id) {
   var html = "";
   html += '<tr>';
+  html += '<th>imagen</th>';
+  html += '<th>'+caracteristica.imagen[_FILES]+'</th>';
+  html += '</tr>';
+  html += '<tr>';
   html += '<th>Maquina</th>';
   html += '<th>'+caracteristica.maquina+'</th>';
   html += '</tr>';
