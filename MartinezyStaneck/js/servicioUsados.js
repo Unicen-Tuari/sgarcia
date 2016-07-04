@@ -1,5 +1,5 @@
 $("#Btcarga").on("click",function(){
-//  event.preventDefault();
+  event.preventDefault();
   var grupo = 166;
   //var formData = new FormData(document.getElementById("formuploadajax"));
   var informacion = {
