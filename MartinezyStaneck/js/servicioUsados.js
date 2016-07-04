@@ -1,9 +1,9 @@
 $("#btncargar").on("click",function(){
   //event.preventDefault();
   var grupo = 166;
-  //var formData = new FormData(document.getElementById("formuploadajax"));
+  var formData = new FormData(document.getElementById("formuploadajax"));
   var informacion = {
-      imagen:"", //formData,
+      imagen:formData,
       maquina:"",
       marca:"",
       modelo:"",
@@ -11,7 +11,6 @@ $("#btncargar").on("click",function(){
       tel:""
   };
    var datos =$('.dato');
-   informacion.imagen="nada";
    informacion.maquina=datos[0].value;
    informacion.marca=datos[1].value;
    informacion.modelo=datos[2].value;
