@@ -3,7 +3,7 @@ $("#Btcarga").on("click",function(){
   var grupo = 166;
   //var formData = new FormData(document.getElementById("formuploadajax"));
   var informacion = {
-      imagen:"foto", //formData,
+      imagen:"", //formData,
       maquina:"",
       marca:"",
       modelo:"",
@@ -11,6 +11,7 @@ $("#Btcarga").on("click",function(){
       tel:""
   };
    var datos =$('.dato');
+   informacion.imagen="nada";
    informacion.maquina=datos[0].value;
    informacion.marca=datos[1].value;
    informacion.modelo=datos[2].value;
