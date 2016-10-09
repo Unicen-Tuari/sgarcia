@@ -1,7 +1,9 @@
 <?php
   require('controller/PagMySController.php');
   require('config/appConfig.php');
-  $controllerPag = new PagMySController();
+  $controllerDatTec= new Controller_Home();
+  $controllerDatTec= new Controller_Maq();
+  $controllerDatTec= new Controller_DatTec();
 
   switch (isset($_GET[AppConfig::$ACTION]) ? $_GET[AppConfig::$ACTION] : AppConfig::$ACTION_DEFAULT ) {
       case AppConfig::$ACTION_DATOS_TECNICOS:
