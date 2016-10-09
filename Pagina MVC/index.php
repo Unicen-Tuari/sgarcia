@@ -1,5 +1,7 @@
 <?php
-  require('controller/PagMySController.php');
+  require('controller/Controller_DatTec.php');
+  require('controller/Controller_Home.php');
+  require('controller/Controller_Maq.php');
   require('config/appConfig.php');
   $controllerDatTec= new Controller_Home();
   $controllerDatTec= new Controller_Maq();
