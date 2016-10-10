@@ -1,7 +1,7 @@
 <?php
 require('libs/Smarty.class.php');
 
-class pageMySView {
+class View_Maquinas {
   private $smarty_Maq;
 
   public function __construct(){
