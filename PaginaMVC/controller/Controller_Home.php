@@ -2,7 +2,7 @@
 require('view/View_Home.php');
 require('model/Model_Home.php');
 
-class Controller_Maq
+class Controller_Home
 {
   private $modelHome;
   private $viewHome;
