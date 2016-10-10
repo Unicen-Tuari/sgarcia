@@ -1,6 +1,6 @@
 <?php
-require('view/pageMySView.php');
-require('model/pageMySViewModel.php');
+require('view/View_Maquinas.php');
+require('model/Model_Maq.php');
 
 class Controller_Maq
 {

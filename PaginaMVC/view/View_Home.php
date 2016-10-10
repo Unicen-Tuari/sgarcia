@@ -6,11 +6,10 @@ class View_Home {
 
   public function __construct(){
     $this->smarty = new Smarty;
-    $this->smarty->debugging = true;
   }
 
-  public function show_nomepage(){
-    
+  public function show(){
+
     $this->smarty->display('pageMyS.tpl');
   }
 

@@ -2,15 +2,15 @@
 require('libs/Smarty.class.php');
 
 class View_DatTec {
-  private $smarty;
+  private $smarty_tec;
 
   public function __construct(){
-    $this->smarty = new Smarty;
-    $this->smarty->debugging = true;
+    $this->smarty_tec = new Smarty;
+    $this->smarty_tec->debugging = true;
   }
 
   public function show_datos_tecnicos(){
-    $this->smarty->display('pageMyS.tpl');
+    $this->smarty_tec->display('pageMyS.tpl');
   }
 
 }

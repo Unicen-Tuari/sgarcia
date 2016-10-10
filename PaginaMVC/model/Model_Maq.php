@@ -1,6 +1,6 @@
 <?php
 
-class pageMySViewModel
+class Model_Maq
 {
   private $db;
 
