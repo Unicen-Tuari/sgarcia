@@ -14,16 +14,7 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <li> <a id="empresa" href="#" >La Empresa <span class="sr-only">(current)</span></a></li>
-        <li class="dropdown">
-          <a class="dropdown-toggle" id="maquinas" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Maquinas <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a id="embutidoras" href="#">Embutidoras</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a id="mixer" href="#" id="mixer">Mixer</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a id="moledoras" href="#">Moledoras</a></li>
-          </ul>
-        </li>
+        <li> <a id="maquinas" href="#" >Las Maquinas <span class="sr-only">(current)</span></a></li>
         <li><a id="tablas" href="#">Datos Tecnicos</a></li>
         <li><a id="contacto" href="#">Contactos</a></li>
       </ul>
