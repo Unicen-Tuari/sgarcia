@@ -1,5 +1,4 @@
 <?php
-require('libs/Smarty.class.php');
 
 class View_Maquinas {
   private $smarty_Maq;
