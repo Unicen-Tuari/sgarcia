@@ -1,5 +1,5 @@
 <?php
-require('libs/Smarty.class.php');
+
 
 class View_Home {
   private $smarty;
@@ -9,8 +9,7 @@ class View_Home {
   }
 
   public function show(){
-
-    $this->smarty->display('pageMyS.tpl');
+    $this->smarty->display('inicio.tpl');
   }
 
 }

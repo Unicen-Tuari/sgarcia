@@ -1,6 +1,4 @@
 <?php
-//require('libs/Smarty.class.php');
-
 class View_DatTec {
   private $smarty_tec;
 
