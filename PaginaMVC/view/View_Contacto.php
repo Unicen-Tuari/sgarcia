@@ -5,7 +5,7 @@ class View_Contacto {
 
   public function __construct(){
     $this->smarty_cont = new Smarty;
-    $this->smarty_cont->debugging = true;
+    //$this->smarty_cont->debugging = true;
   }
 
   public function show(){
