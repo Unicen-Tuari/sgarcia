@@ -8,15 +8,15 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" id="home" href="#">Home</a>
+      <a class="navbar-brand" id="home" href="index.php?action=mostrar_home">Home</a>
     </div>
     <!-- Barra de navegacion general -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li> <a id="empresa" href="#" >La Empresa <span class="sr-only">(current)</span></a></li>
+        <li> <a id="empresa" href="index.php?action=mostrar_nosotros" >La Empresa <span class="sr-only">(current)</span></a></li>
         <li> <a id="maquinas" href="#" >Las Maquinas <span class="sr-only">(current)</span></a></li>
         <li><a id="tablas" href="#">Datos Tecnicos</a></li>
-        <li><a id="contacto" href="#">Contactos</a></li>
+        <li><a id="contacto" href="index.php?action=formulario_contacto">Contactos</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <form class="navbar-form navbar-left" role="search">
