@@ -1,7 +1,8 @@
 <?php
 class appConfig{
   public static $ACTION = 'action';
-  public static $ACTION_DEFAULT = 'mostrar_home';
+  public static $ACTION_DEFAULT = 'ver_pagina_base';
+  public static $ACTION_HOME = 'mostrar_home';
   public static $ACTION_DATOS_TECNICOS = 'mostrar_datos_tecnicos';
   public static $ACTION_AGREGAR_DATOS_TECNICOS = 'agregar_dato_tecnico';
   public static $ACTION_BORRAR_DATOS_TECNICOS = 'borrar_dato_tecnico';
