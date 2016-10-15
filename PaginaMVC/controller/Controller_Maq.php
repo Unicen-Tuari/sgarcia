@@ -12,7 +12,12 @@ class Controller_Maq
     $this->modelMaq = new Model_Maq();
     $this->viewMaq = new View_Maquinas();
   }
+
+ public function Cargar()
+ {
+   $maquinas=$this->modelMaq->listarMaquinas();
+   $this->viewMaq->showMaquinas($maquinas);
+ }
+
 }
-
-
 ?>

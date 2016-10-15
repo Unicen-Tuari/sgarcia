@@ -1,15 +1,18 @@
 <?php
 
 class View_Maquinas {
-  private $smarty_Maq;
+  private $smarty;
 
   public function __construct(){
-    $this->smarty_Maq = new Smarty;
+    $this->smarty= new Smarty;
     }
 
-  public function show(){
-    $this->smarty_Maq->display('pageMyS.tpl');
+  public function showMaquinas($maquinas){
+    $this->smarty->assign('maquinas',$maquinas);
+    //print_r($maquinas);
+    $this->smarty->display('maquinas.tpl');
   }
+
 
 }
 
