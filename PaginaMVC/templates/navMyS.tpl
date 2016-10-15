@@ -19,11 +19,16 @@
         <li><a id="contacto" href="index.php?action=formulario_contacto">Contactos</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <form class="navbar-form navbar-left" role="search">
+        <form action="" class="navbar-form navbar-left" method="POST" enctype="multipart/form-data" id="login" role="logear">
           <div class="form-group">
-            <input type="text" id="Prod_busq" class="form-control" placeholder="Producto">
+            <input type="text" id="clav" class="form-control" placeholder="Key admin">
           </div>
-          <button type="submit" id="boton_buscar" href="#" class="btn btn-default">Buscar</button>
+          <button type="submit" id="btn_Login" href="#" class="btn btn-default">Login</button>
+          {if isset($key_error)}
+          {if ($key_error) }
+          <p class="text-danger">Clave incorrecta !!!</p>
+          {/if}
+          {/if}
         </form>
       </ul>
     </div><!-- /.navbar-collapse -->

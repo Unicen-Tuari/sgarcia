@@ -1,7 +1,7 @@
 <?php
 require('libs/Smarty.class.php');
 
-class View_Page {
+class view_Admin {
   private $smarty;
 
   public function __construct(){
@@ -11,12 +11,6 @@ class View_Page {
   public function show(){
     $this->smarty->display('pageMyS.tpl');
   }
-  
-  public function show_login($error_key){
-      $this->smarty->assign('error_key',$error_key);
-      $this->smarty->display('pageMyS.tpl');
-      }
-
 
 }
 

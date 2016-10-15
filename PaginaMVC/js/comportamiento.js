@@ -20,6 +20,27 @@ function cargaretiqueta(etiqueta) {
           }
         );
   }
+
+  $('#login').submit(function(e){
+  e.preventDefault();
+  var claveIng = $('#clav').value;
+  $.ajax({
+   method: "POST",
+   url: "index.php?action=mostrar_admin",
+   data: claveIng,
+   contentType: false,
+   cache: false,
+   processData:false,
+   success: function(){
+     //cargaretiqueta("index.php?action=mostrar_home")
+    $('#login').trigger("reset");
+   }
+ });
+
+ });
+
+
+
   $("#home").on("click", function(e){
     e.preventDefault();
     cargaretiqueta("index.php?action=mostrar_home")
