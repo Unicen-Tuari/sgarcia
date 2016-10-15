@@ -3,7 +3,6 @@ $(document).ready(function(){
 cargaretiqueta("index.php?action=mostrar_home");
 
 function cargaretiqueta(etiqueta) {
-  // event.preventDefault();
     $.ajax({
             method: "GET",
             url:etiqueta,
@@ -50,13 +49,15 @@ function cargaretiqueta(etiqueta) {
     e.preventDefault();
     cargaretiqueta("index.php?action=mostrar_nosotros")}
   );
-  //$("#maquinas").on("click", function(){cargaretiqueta("templates/maquinas.tpl")});
-  //$("#embutidoras").on("click", function(){cargaretiqueta("templates/embutidora.tpl")});
-  //$("#mixer").on("click", function(){cargaretiqueta("templates/mixers.tpl")});
-  //$("#moledoras").on("click", function(){cargaretiqueta("templates/moledora.tpl")});
+  $("#maquinas").on("click", function(e){
+    e.preventDefault();
+    cargaretiqueta("index.php?action=mostrar_maquinas")});
   $("#contacto").on("click", function(e){
     e.preventDefault();
     cargaretiqueta("index.php?action=formulario_contacto")});
-  //$("#tablas").on("click", function(){cargaretiqueta("templates/tecnica.tpl")});
+
+  $("#tablas").on("click", function(e){
+    e.preventDefault();
+    cargaretiqueta("index.php?action=mostrar_datos_tecnicos")});
 
 });

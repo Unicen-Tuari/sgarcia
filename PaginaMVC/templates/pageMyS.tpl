@@ -7,11 +7,18 @@
     {include file="navAdmin.tpl"}
   {/if}
 {else}
-{include file="navMyS.tpl"}
+   {include file="navMyS.tpl"}
 {/if}
 
 <article>
   <div id="contenido">
   </div>
 </article>
-{include file="footerMyS.tpl"}
+
+{if isset($key_error)}
+  {if ($key_error)}
+    {include file="footerMyS.tpl"}
+  {/if}
+{else}
+  {include file="footerMyS.tpl"}
+{/if}

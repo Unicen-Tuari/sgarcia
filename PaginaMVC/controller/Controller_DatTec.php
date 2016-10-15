@@ -12,6 +12,13 @@ class Controller_DatTec
     $this->modelDatTec= new Model_DatTec();
     $this->viewDatTec = new View_DatTec();
   }
+
+  public function Cargar()
+  {
+    $maquinas=$this->modelDatTec->listarDatosTec();
+    $this->viewDatTec->show($maquinas);
+  }
+
 }
 
 

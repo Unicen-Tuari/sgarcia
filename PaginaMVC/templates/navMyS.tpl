@@ -19,15 +19,13 @@
         <li><a id="contacto" href="index.php?action=formulario_contacto">Contactos</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <form action="" class="navbar-form navbar-left" method="POST" enctype="multipart/form-data" id="login" role="logear">
+        <form action="" class="navbar-form navbar-left" method="POST" enctype="multipart/form-data" id="loginw" role="logear">
           <div class="form-group">
             <input type="text" id="clav" class="form-control" placeholder="Key admin">
           </div>
-          <button type="submit" id="btn_Login" href="#" class="btn btn-default">Login</button>
+          <button type="submit" id="btn_Login" href="www.google.com" class="btn btn-default">Login</button>
           {if isset($key_error)}
-          {if ($key_error) }
-          <p class="text-danger">Clave incorrecta !!!</p>
-          {/if}
+            <p class="text-danger">Clave incorrecta !!!</p>
           {/if}
         </form>
       </ul>

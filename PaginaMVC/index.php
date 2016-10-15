@@ -6,8 +6,8 @@
   require('controller/Controller_Nosotros.php');
   require('controller/Controller_Contacto.php');
   require('config/appConfig.php');
-  $controllerMaq= new Controller_Maq();
-  $controllerDatTec= new Controller_DatTec();
+
+
 
 
   if( !array_key_exists(appConfig::$ACTION, $_REQUEST) ||
@@ -19,7 +19,7 @@
      }
 
   else {
-    switch ($_REQUEST[appConfig::$ACTION]) {  
+    switch ($_REQUEST[appConfig::$ACTION]) {
       case appConfig::$ACTION_ADMIN:
           echo $_POST['clav'];
           $controllerPage= new Controller_Page();
@@ -29,6 +29,16 @@
           $controllerHome= new Controller_Home();
           $controllerHome->Cargar();
           break;
+
+      case appConfig::$ACTION_MOSTRAR_MAQUINAS:
+            $controllerMaq= new Controller_Maq();
+            $controllerMaq->Cargar();
+              break;
+
+      case appConfig::$ACTION_DATOS_TECNICOS:
+            $controllerDatTec= new Controller_DatTec();
+            $controllerDatTec->Cargar();
+            break;
 
       case appConfig::$ACTION_NOSOTROS:
           $controllerNos= new Controller_Nosotros();

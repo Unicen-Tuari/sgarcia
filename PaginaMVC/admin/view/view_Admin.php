@@ -1,5 +1,5 @@
 <?php
-require('libs/Smarty.class.php');
+require('../libs/Smarty.class.php');
 
 class view_Admin {
   private $smarty;
