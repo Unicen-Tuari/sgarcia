@@ -17,12 +17,6 @@
           break;
       case appConfig::$ACTION_HOME:
           break;
-
-      case appConfig::$ACTION_NOSOTROS:
-          break;
-      case appConfig::$ACTION_CONTACTO:
-          break;
-
       default:
         echo 'Pagina no encontrada';
         break;
