@@ -1,7 +1,7 @@
 <ul class="list-group">
-  {foreach from=$maquinas item=maquina}
+  {foreach from=$datos item=dato}
      <li class="list-group-item">
-         {if $maquina['imagenes'] }
+         {if $dato['imagenes'] }
          <img src="{$maquina['imagenes'][0]['path']}" alt="{$maquina['nombre']}_image_{$index}" WIDTH=140 HEIGHT=210 class="img-thumbnail" />
            <table class="table table-striped">
              <thead>
@@ -12,27 +12,27 @@
              <tbody>
                <tr>
                <td>Denominacion</td>
-               <td>{$maquina['denominacion']}</td>
+               <td>{$dato['denominacion']}</td>
                </tr>
                <tr>
                <td>Potencia</td>
-               <td>{$maquina['potencia']}</td>
+               <td>{$dato['potencia']}</td>
                </tr>
                <tr>
                <td>Altura</td>
-               <td>{$maquina['altura']}</td>
+               <td>{$dato['altura']}</td>
                </tr>
                <tr>
                <td>Ancho</td>
-               <td>{$maquina['ancho']}</td>
+               <td>{$dato['ancho']}</td>
                </tr>
                <tr>
                <td>Peso</td>
-               <td>{$maquina['peso']}</td>
+               <td>{$dato['peso']}</td>
                </tr>
                <tr>
                <td>Capacidad</td>
-               <td>{$maquina['capacidad']}</td>
+               <td>{$dato['capacidad']}</td>
                </tr>
              </tbody>
            </table>
