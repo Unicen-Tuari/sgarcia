@@ -1,6 +1,8 @@
 <?php
   require('controller/controller_Admin.php');
-  require('config/Config_admin.php');
+  require('config/config_admin.php');
+  require('controller/controller_Maq_Admin.php');
+  require('controller/controller_DatTec_Admin.php');
 
 
   if( !array_key_exists(appConfig::$ACTION, $_REQUEST) ||
@@ -13,9 +15,20 @@
 
   else {
     switch ($_REQUEST[appConfig::$ACTION]) {
-      case appConfig::$ACTION_ADMIN:
+      case appConfig::$ACTION_MAQ_ADMIN:
+          $controllerMaq_Admin= new Controller_Maq_Admin();
+          $controllerMaq_Admin->Cargar();
           break;
-      case appConfig::$ACTION_HOME:
+      case appConfig::$ACTION_ADD_MAQ:
+          $controllerMaq_Admin= new Controller_Maq_Admin();
+          $controllerMaq_Admin->agregarMaquina();
+          break;
+      case appConfig::$ACTION_DATTEC_ADMIN:
+          $controllerDat_Admin= new controller_DatTec_Admin();
+          $controllerDat_Admin->Cargar();
+          break;
+      case appConfig::$ACTION_ADD_DAT_TEC:
+          $controllerMaq_Admin->agregarMaquina();
           break;
       default:
         echo 'Pagina no encontrada';
