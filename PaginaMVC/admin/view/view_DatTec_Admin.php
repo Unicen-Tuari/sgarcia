@@ -9,12 +9,12 @@ class view_DatTec_admin {
 
   public function show($maquinas,$datos){
     $this->smarty->assign('maquinas',$maquinas);
+    //var_dump((int)$maquinas[0]['id_maq']);
     $this->smarty->assign('datos',$datos);
     $this->smarty->display('datTec_admin.tpl');
   }
 
-  public function showListMaq($maquinas,$datos){
-    $this->smarty->assign('maquinas',$maquinas);
+  public function showListDat($datos){
     $this->smarty->assign('datos',$datos);
     $this->smarty->display('list_DatTec_admin.tpl');
   }

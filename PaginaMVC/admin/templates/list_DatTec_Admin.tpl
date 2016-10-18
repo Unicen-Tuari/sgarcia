@@ -2,7 +2,8 @@
   {foreach from=$datos item=dato}
      <li class="list-group-item">
          {if $dato['imagenes'] }
-         <img src="{$maquina['imagenes'][0]['path']}" alt="{$maquina['nombre']}_image_{$index}" WIDTH=140 HEIGHT=210 class="img-thumbnail" />
+         <img src="../{$dato['imagenes'][0]['path']}" alt="{$maquina['nombre']}_image_{$index}" WIDTH=140 HEIGHT=210 class="img-thumbnail" />
+         {/if}
            <table class="table table-striped">
              <thead>
                <tr>
@@ -37,7 +38,6 @@
              </tbody>
            </table>
          </div>
-         {/if}
      </li>
   {/foreach}
 </ul>

@@ -23,6 +23,21 @@ class controller_DatTec_Admin
    $this->viewDatTec->show($maquinas,$datos);
  }
 
+ public function AgregarDatoTecnico(){
+       if (isset($_POST['id_maq']) && $_POST['id_maq']!=''){
+       $id_maq = (int)$_POST['id_maq'];
+       $denom = $_POST['denominacion'];
+       $potencia = $_POST['potencia'];
+       $altura = $_POST['altura'];
+       $ancho = $_POST['ancho'];
+       $peso = $_POST['peso'];
+       $capacidad = $_POST['capacidad'];
+       $this->modelDatTec->agregarDatosTecnicos($id_maq,$denom,$potencia,$altura,$ancho,$peso,$capacidad);
+    }
+    $datos = $this->modelDatTec->listarDatosTec();
+    $this->viewDatTec->showListDat($datos);
+   }
+
 
 }
 ?>

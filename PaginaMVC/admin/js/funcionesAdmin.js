@@ -1,6 +1,6 @@
 "use strict";
 $(document).ready(function(){
-//cargarAdmin("index.php?action=mostrar_maquinas_admin");
+cargarAdmin("index.php?action=mostrar_maquinas_admin");
 
 function cargarAdmin(etiqueta) {
     $.ajax({
@@ -25,14 +25,12 @@ function cargarAdmin(etiqueta) {
   $("#maq_admin").on("click", function(e){
     e.preventDefault();
     cargarAdmin("index.php?action=mostrar_maquinas_admin")
-  }
-  );
+  });
 
   $("#tablas_admin").on("click", function(e){
       e.preventDefault();
-      alert("el boton anda");
+
       cargarAdmin("index.php?action=mostrar_dattec_admin")
-    }
-    );
+    });
 
 });

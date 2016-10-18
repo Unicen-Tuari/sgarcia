@@ -28,7 +28,8 @@
           $controllerDat_Admin->Cargar();
           break;
       case appConfig::$ACTION_ADD_DAT_TEC:
-          $controllerMaq_Admin->agregarMaquina();
+          $controllerDat_Admin= new controller_DatTec_Admin();
+          $controllerDat_Admin->AgregarDatoTecnico();
           break;
       default:
         echo 'Pagina no encontrada';
