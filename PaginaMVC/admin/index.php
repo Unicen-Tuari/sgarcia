@@ -14,6 +14,7 @@
      }
 
   else {
+    
     switch ($_REQUEST[appConfig::$ACTION]) {
       case appConfig::$ACTION_MAQ_ADMIN:
           $controllerMaq_Admin= new Controller_Maq_Admin();
