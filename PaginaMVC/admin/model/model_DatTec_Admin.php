@@ -46,7 +46,7 @@ return $dat_to_return;
   $update = $this->db->prepare("update maquina set datos_tecnicos=? where id_maq=?");
   $update->execute(array($dat_Tec,$id_maq));
   $insert->execute(array($id_maq,$denom,$potencia,$altura,$ancho,$peso,$capacidad));
-  return $this->listDatoTec($id_maq);
+  //return $this->listDatoTec($id_maq);
 }
 
 

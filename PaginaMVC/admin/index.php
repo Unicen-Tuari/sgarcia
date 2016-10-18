@@ -42,6 +42,7 @@
           $controllerDat_Admin->Cargar();
           break;
       case appConfig::$ACTION_ADD_DAT_TEC:
+          //print_r($_REQUEST);
           $controllerDat_Admin= new controller_DatTec_Admin();
           $controllerDat_Admin->AgregarDatoTecnico();
           break;

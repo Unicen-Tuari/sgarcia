@@ -1,6 +1,6 @@
 <form action="" method="POST" enctype="multipart/form-data" id="add_dat_tec">
   <div class="form-group">
-    <label for="maquina">Maquina</label>
+    <label for="id_maq">Maquina</label>
     <select name="id_maq" class="form-control" id="id_maq">
     <option value="" disabled selected> Elija tipo de maquina</option>
     {foreach from=$maquinas item=maquina}
@@ -35,4 +35,4 @@
 <div id="listDatTec">
 {include file='list_DatTec_Admin.tpl'}
 </div>
-<script src="js/cargarDatTec.js"></script>
+<script src="js/cargaDatTec.js"></script>

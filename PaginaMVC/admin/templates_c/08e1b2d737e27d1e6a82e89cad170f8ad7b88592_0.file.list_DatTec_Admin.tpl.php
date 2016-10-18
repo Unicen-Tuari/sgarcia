@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-10-18 02:54:51
+/* Smarty version 3.1.30, created on 2016-10-18 21:24:20
   from "C:\xampp\htdocs\dashboard\sgarcia\PaginaMVC\admin\templates\list_DatTec_Admin.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_580572db746766_15626075',
+  'unifunc' => 'content_580676e4bb2d36_61535194',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '08e1b2d737e27d1e6a82e89cad170f8ad7b88592' => 
     array (
       0 => 'C:\\xampp\\htdocs\\dashboard\\sgarcia\\PaginaMVC\\admin\\templates\\list_DatTec_Admin.tpl',
-      1 => 1476752082,
+      1 => 1476765763,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_580572db746766_15626075 (Smarty_Internal_Template $_smarty_tpl) {
+function content_580676e4bb2d36_61535194 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <ul class="list-group">
   <?php

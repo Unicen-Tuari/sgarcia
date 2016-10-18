@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-10-18 02:54:51
+/* Smarty version 3.1.30, created on 2016-10-18 22:09:41
   from "C:\xampp\htdocs\dashboard\sgarcia\PaginaMVC\admin\templates\datTec_admin.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_580572db553311_79117484',
+  'unifunc' => 'content_5806818513cd03_37786249',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'c4e026c75fdc8932c8830f256b24920be5b887e4' => 
     array (
       0 => 'C:\\xampp\\htdocs\\dashboard\\sgarcia\\PaginaMVC\\admin\\templates\\datTec_admin.tpl',
-      1 => 1476752080,
+      1 => 1476821373,
       2 => 'file',
     ),
   ),
@@ -21,11 +21,11 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:list_DatTec_Admin.tpl' => 1,
   ),
 ),false)) {
-function content_580572db553311_79117484 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5806818513cd03_37786249 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <form action="" method="POST" enctype="multipart/form-data" id="add_dat_tec">
   <div class="form-group">
-    <label for="maquina">Maquina</label>
+    <label for="id_maq">Maquina</label>
     <select name="id_maq" class="form-control" id="id_maq">
     <option value="" disabled selected> Elija tipo de maquina</option>
     <?php
@@ -75,7 +75,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
 
 </div>
 <?php echo '<script'; ?>
- src="js/cargarDatTec.js"><?php echo '</script'; ?>
+ src="js/cargaDatTec.js"><?php echo '</script'; ?>
 >
 <?php }
 }

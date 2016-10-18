@@ -1,4 +1,9 @@
 "use strict";
+function recargarListaDat(data) {
+  $('#listDatTec').html(data);
+  
+}
+
 $(document).ready(function(){
  $("#add_dat_tec").submit(function(e){
    e.preventDefault();
@@ -11,7 +16,7 @@ $(document).ready(function(){
     cache: false,
     processData:false,
     success: function(receivedData){
-        $('#listDatTec').html(receivedData);
+        recargarListaDat(receivedData);
       }
     });
     });

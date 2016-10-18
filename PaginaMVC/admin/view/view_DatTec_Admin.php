@@ -16,7 +16,7 @@ class view_DatTec_admin {
 
   public function showListDat($datos){
     $this->smarty->assign('datos',$datos);
-    $this->smarty->display('list_DatTec_admin.tpl');
+    $this->smarty->display('list_DatTec_Admin.tpl');
   }
 
 }
