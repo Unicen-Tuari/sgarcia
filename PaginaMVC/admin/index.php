@@ -28,6 +28,14 @@
           //print_r($_REQUEST);
           $controllerMaq_Admin->borrarMaquina();
           break;
+      case appConfig::$ACTION_UPD_MAQ:
+          $controllerMaq_Admin= new controller_Maq_Admin();
+          $controllerMaq_Admin->editarMaquina();
+          break;
+     case appConfig::$ACTION_ADD_UPD_MAQ:
+          $controllerMaq_Admin= new controller_Maq_Admin();
+          $controllerMaq_Admin->agregarMaquinaAct();
+          break;
 
       case appConfig::$ACTION_DATTEC_ADMIN:
           $controllerDat_Admin= new controller_DatTec_Admin();

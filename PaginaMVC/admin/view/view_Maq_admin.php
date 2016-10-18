@@ -16,6 +16,11 @@ class View_Maq_admin {
     $this->smarty->assign('maquinas',$maquinas);
     $this->smarty->display('list_Maq_admin.tpl');
   }
+  public function showMaqEdit($maquina){
+  $this->smarty->assign('maquina',$maquina);
+  $this->smarty->display('list_Maq_Edit.tpl');
+}
+
 
 }
 

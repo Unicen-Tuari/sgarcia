@@ -54,6 +54,23 @@ return $maq_to_return;
   return $this->listarMaquina($fk_id_maq);
 }
 
+public function agregarMaquinaAct($id_maq,$nombre,$tipo,$precio,$images){
+ $insert = $this->db->prepare("update maquina set nombre=? where id_maq=?");
+ $insert->execute(array($nombre,$id_maq));
+ $insert = $this->db->prepare("update maquina set tipo=? where id_maq=?");
+ $insert->execute(array($tipo,$id_maq));
+ $insert = $this->db->prepare("update maquina set precio=? where id_maq=?");
+ $insert->execute(array($precio,$id_maq));
+
+ foreach ($images as $image) {
+   $path_image =  $this->copyImage($image);
+   $insert = $this->db->prepare("INSERT INTO imagen(path, fk_id_maq) VALUES(?,?)");
+   $insert->execute(array($path_image,$id_maq));
+  }
+ return $this->listarMaquina($id_maq);
+}
+
+
 function copyImage($image){
     $path = 'images/'.uniqid().$image["name"];
     $path_upload='../'.$path;

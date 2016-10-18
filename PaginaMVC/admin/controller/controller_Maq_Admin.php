@@ -62,5 +62,44 @@ public function borrarMaquina(){
  }
 
 
+ public function editarMaquina()
+ { if (isset($_REQUEST['maquina'])){
+   $id_maq = (int)$_REQUEST['maquina'];
+   $maquina=$this->modelMaq->listarMaquina($id_maq);
+   }
+   $this->viewMaq->showMaqEdit($maquina);
+ }
+
+ public function agregarMaquinaAct()
+ {
+   if (isset($_POST['nombre']) && $_POST['nombre']!=''){
+   $imagenes = [];
+   if(isset($_FILES['image'])){
+   for($i=0; $i<count($_FILES['image']['name']);$i++)
+   {
+     if(($_FILES['image']['size'][$i]>0) && ($this->esImagen($_FILES['image']['type'][$i])))
+     {
+         $image_name = $_FILES['image']['name'][$i];
+         $image_tmp = $_FILES['image']['tmp_name'][$i];
+         $image['name']=$image_name;
+         $image['tmp_name']=$image_tmp;
+         $imagenes[] = $image;
+     }
+   }
+
+   }
+   $id_maq= $_POST['id_maq'];
+   $nombre = $_POST['nombre'];
+   $tipo = $_POST['tipo'];
+   $precio = $_POST['precio'];
+   $this->modelMaq->agregarMaquinaAct($id_maq,$nombre,$tipo,$precio,$imagenes);
+ }
+ $maquinas = $this->modelMaq->listarMaquinas();
+ $this->viewMaq->show($maquinas);
+
+ }
+
+
+
 }
 ?>
