@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-10-18 03:36:05
+/* Smarty version 3.1.30, created on 2016-10-18 21:00:54
   from "C:\xampp\htdocs\dashboard\sgarcia\PaginaMVC\admin\templates\maq_admin.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_58057c85b6a8c0_77168594',
+  'unifunc' => 'content_58067166543754_39912084',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '93c2cd40b6695bc70da1f89c74c30f2a410911f3' => 
     array (
       0 => 'C:\\xampp\\htdocs\\dashboard\\sgarcia\\PaginaMVC\\admin\\templates\\maq_admin.tpl',
-      1 => 1476754514,
+      1 => 1476765766,
       2 => 'file',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:list_Maq_Admin.tpl' => 1,
   ),
 ),false)) {
-function content_58057c85b6a8c0_77168594 (Smarty_Internal_Template $_smarty_tpl) {
+function content_58067166543754_39912084 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <form action="" method="POST" enctype="multipart/form-data" id="add_maq">
    <div class="form-group">

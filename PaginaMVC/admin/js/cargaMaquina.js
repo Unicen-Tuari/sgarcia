@@ -1,5 +1,23 @@
 "use strict";
+function recargarListaMaq(data) {
+  $('#listMaq').html(data);
+  borrarMaquina();
+  actualizarMaquina();
 
+}
+function borrarMaquina() {
+$(".deleteAction").on("click",function(e){
+  e.preventDefault();
+  var id_maq = $(this).attr("id-maq");
+   //alert("le da bola al boton "+id_maq);
+  $.get("index.php?action=delete_maq",
+     { maquina: id_maq },
+     function(data){
+       recargarListaMaq(data);
+     });
+
+  });
+}
 
 $(document).ready(function(){
   $("#add_maq").submit(function(e){
@@ -13,23 +31,13 @@ $(document).ready(function(){
    cache: false,
    processData:false,
    success: function(receivedData){
-       $('#listMaq').html(receivedData);
+       recargarListaMaq(receivedData);
 
             }
    });
    });
 
-   $(".deleteAction").on("click",function(e){
-     e.preventDefault();
-     var id_maq = $(this).attr("id-maq");
-      //alert("le da bola al boton "+id_maq);
-     $.get("index.php?action=delete_maq",
-        { maquina: id_maq },
-        function(data){
-          $('#listMaq').html(data);
-        });
-
-     });
-
+     borrarMaquina();
+     actualizarMaquina();
 
  });
