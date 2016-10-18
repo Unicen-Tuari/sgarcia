@@ -23,6 +23,12 @@
           $controllerMaq_Admin= new Controller_Maq_Admin();
           $controllerMaq_Admin->agregarMaquina();
           break;
+      case appConfig::$ACTION_DEL_MAQ:
+          $controllerMaq_Admin= new Controller_Maq_Admin();
+          //print_r($_REQUEST);
+          $controllerMaq_Admin->borrarMaquina();
+          break;
+
       case appConfig::$ACTION_DATTEC_ADMIN:
           $controllerDat_Admin= new controller_DatTec_Admin();
           $controllerDat_Admin->Cargar();

@@ -61,6 +61,15 @@ function copyImage($image){
     return $path;
   }
 
+public function borrarMaquina($id_maq){
+  $delete = $this->db->prepare("delete from maquina where id_maq=?");
+  $delete->execute(array($id_maq));
+  $return['status']= $delete->rowCount()==1 ? 'la tarea fue borrada con exito :)': 'ERROR!';
+  return $return;
+
+}
+
+
 
 }
 

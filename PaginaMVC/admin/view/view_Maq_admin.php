@@ -5,7 +5,7 @@ class View_Maq_admin {
 
   public function __construct(){
     $this->smarty= new Smarty;
-    }
+  }
 
   public function show($maquinas){
     $this->smarty->assign('maquinas',$maquinas);

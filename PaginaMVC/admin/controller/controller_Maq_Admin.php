@@ -50,6 +50,17 @@ class controller_Maq_Admin
      $this->viewMaq->showListMaq($maquinas);
    }
 
+public function borrarMaquina(){
+
+  if (isset($_REQUEST['maquina'])){
+    //var_dump($_REQUEST['maquina']);
+    $id_maq = (int)$_REQUEST['maquina'];
+    $this->modelMaq->borrarMaquina($id_maq);
+  }
+  $maquinas = $this->modelMaq->listarMaquinas();
+  $this->viewMaq->showListMaq($maquinas);
+ }
+
 
 }
 ?>

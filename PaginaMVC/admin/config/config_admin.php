@@ -6,6 +6,7 @@ class appConfig{
   public static $ACTION_DATTEC_ADMIN = 'mostrar_dattec_admin';
   public static $ACTION_ADD_MAQ = 'agregar_maquina';
   public static $ACTION_ADD_DAT_TEC = 'agregar_Dat_Tec';
+  public static $ACTION_DEL_MAQ = 'delete_maq';
 }
 
 ?>
