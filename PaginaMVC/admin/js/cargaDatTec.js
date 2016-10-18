@@ -1,7 +1,7 @@
 "use strict";
 function recargarListaDat(data) {
   $('#listDatTec').html(data);
-  
+
 }
 
 $(document).ready(function(){
@@ -16,6 +16,7 @@ $(document).ready(function(){
     cache: false,
     processData:false,
     success: function(receivedData){
+      console.log(receivedData);
         recargarListaDat(receivedData);
       }
     });

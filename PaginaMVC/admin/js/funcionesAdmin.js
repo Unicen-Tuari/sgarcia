@@ -1,7 +1,7 @@
 "use strict";
 
 $(document).ready(function(){
-//cargarAdmin("index.php?action=mostrar_maquinas_admin");
+cargarAdmin("index.php?action=mostrar_maquinas_admin");
 
 function cargarAdmin(etiqueta) {
     $.ajax({

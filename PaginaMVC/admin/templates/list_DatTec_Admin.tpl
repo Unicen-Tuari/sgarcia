@@ -4,6 +4,13 @@
          {if $dato['imagenes'] }
          <img src="../{$dato['imagenes'][0]['path']}" alt="{$maquina['nombre']}_image_{$index}" WIDTH=140 HEIGHT=210 class="img-thumbnail" />
          {/if}
+         <a class="deleteAction" id-maq="{$dato['id_maq']}" href="#">
+            <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+         </a>
+         <a class="updateAction" id-maq="{$dato['id_maq']}" href="#">
+          <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
+         </a>
+
            <table class="table table-striped">
              <thead>
                <tr>
@@ -37,7 +44,7 @@
                </tr>
              </tbody>
            </table>
-         </div>
      </li>
+
   {/foreach}
 </ul>
