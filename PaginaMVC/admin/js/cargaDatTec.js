@@ -4,6 +4,20 @@ function recargarListaDat(data) {
 
 }
 
+function borrarDatTec() {
+$(".deleteAction").on("click",function(e){
+  e.preventDefault();
+  var id_maq = $(this).attr("id-maq");
+   //alert("le da bola al boton "+id_maq);
+  $.get("index.php?action=delete_dat",
+     { maquina: id_maq },
+     function(data){
+       recargarListaDat(data);
+     });
+
+  });
+}
+
 $(document).ready(function(){
  $("#add_dat_tec").submit(function(e){
    e.preventDefault();
@@ -21,5 +35,6 @@ $(document).ready(function(){
       }
     });
     });
+    borrarDatTec();
 
  });

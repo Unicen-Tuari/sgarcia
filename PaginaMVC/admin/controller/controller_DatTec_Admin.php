@@ -38,6 +38,16 @@ class controller_DatTec_Admin
     $this->viewDatTec->showListDat($datos);
    }
 
+ public function BorrarDatoTecnico(){
+     if (isset($_REQUEST['maquina'])){
+       //var_dump($_REQUEST['maquina']);
+       $id_maq = (int)$_REQUEST['maquina'];
+       $this->modelDatTec->borrarDato($id_maq);
+     }
+     $datos = $this->modelDatTec->listarDatosTec();
+     $this->viewDatTec->showListDat($datos);
+    }
+
 
 }
 ?>

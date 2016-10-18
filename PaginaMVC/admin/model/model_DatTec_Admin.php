@@ -49,6 +49,18 @@ return $dat_to_return;
   //return $this->listDatoTec($id_maq);
 }
 
+public function borrarDato($id_maq){
+  $delete = $this->db->prepare("delete from datos_tecnicos where id_maq=?");
+  $delete->execute(array($id_maq));
+  $dat_Tec=0;
+  $update = $this->db->prepare("update maquina set datos_tecnicos=? where id_maq=?");
+  $update->execute(array($dat_Tec,$id_maq));
+  $return['status']= $delete->rowCount()==1 ? 'la tarea fue borrada con exito :)': 'ERROR!';
+  return $return;
+
+}
+
+
 
 }
 
