@@ -1,8 +1,16 @@
 "use strict";
 function recargarListaDat(data) {
   $('#listDatTec').html(data);
-
+  borrarDatTec();
+  actualizarDato();
 }
+
+function recargarListaDatAct(data) {
+  $('#contenido').html(data);
+  borrarDatTec();
+  actualizarDato();
+}
+
 
 function borrarDatTec() {
 $(".deleteAction").on("click",function(e){
@@ -17,6 +25,42 @@ $(".deleteAction").on("click",function(e){
 
   });
 }
+
+function cargarDatActualizado(){
+  $("#upd_dat").submit(function(e){
+    e.preventDefault();
+    var formData = new FormData(this);
+    $.ajax({
+     method: "POST",
+     url: "index.php?action=agregar_dato_modificado",
+     data: formData,
+     contentType: false,
+     cache: false,
+     processData:false,
+     success: function(receivedData){
+         recargarListaDatAct(receivedData);
+
+              }
+     });
+     });
+}
+
+function actualizarDato() {
+$(".updateAction").on("click",function(e){
+  e.preventDefault();
+  var id_maq = $(this).attr("id-maq");
+  $.get("index.php?action=editar_dato",
+     { maquina: id_maq },
+       function(data){
+       $("#contenido").html(data);
+       cargarDatActualizado();
+     });
+
+  });
+}
+
+
+
 
 $(document).ready(function(){
  $("#add_dat_tec").submit(function(e){
@@ -36,5 +80,6 @@ $(document).ready(function(){
     });
     });
     borrarDatTec();
+    actualizarDato();
 
  });

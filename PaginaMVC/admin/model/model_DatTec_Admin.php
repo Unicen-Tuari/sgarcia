@@ -39,6 +39,23 @@ foreach ($datos as $idMaq => $dato) {
 return $dat_to_return;
 }
 
+ public function agregarDatoAct($id_maq,$denominacion,$potencia,$altura,$ancho,$peso,$capacidad){
+   $insert = $this->db->prepare("update datos_tecnicos set denominacion=? where id_maq=?");
+   $insert->execute(array($denominacion,$id_maq));
+   $insert = $this->db->prepare("update datos_tecnicos set potencia=? where id_maq=?");
+   $insert->execute(array($potencia,$id_maq));
+   $insert = $this->db->prepare("update datos_tecnicos set altura=? where id_maq=?");
+   $insert->execute(array($altura,$id_maq));
+   $insert = $this->db->prepare("update datos_tecnicos set ancho=? where id_maq=?");
+   $insert->execute(array($ancho,$id_maq));
+   $insert = $this->db->prepare("update datos_tecnicos set peso=? where id_maq=?");
+   $insert->execute(array($peso,$id_maq));
+   $insert = $this->db->prepare("update datos_tecnicos set capacidad=? where id_maq=?");
+   $insert->execute(array($capacidad,$id_maq));
+
+   return $this->listDatoTec($id_maq);
+
+ }
 
  public function AgregarDatosTecnicos($id_maq,$denom,$potencia,$altura,$ancho,$peso,$capacidad){
   $insert = $this->db->prepare("INSERT INTO datos_tecnicos(id_maq,denominacion,potencia,altura,ancho,peso,capacidad) VALUES(?,?,?,?,?,?,?)");

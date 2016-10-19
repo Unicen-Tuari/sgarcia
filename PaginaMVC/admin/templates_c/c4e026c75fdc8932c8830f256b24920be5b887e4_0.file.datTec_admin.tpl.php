@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-10-18 23:57:26
+/* Smarty version 3.1.30, created on 2016-10-19 02:44:49
   from "C:\xampp\htdocs\dashboard\sgarcia\PaginaMVC\admin\templates\datTec_admin.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_58069ac64269b4_26981867',
+  'unifunc' => 'content_5806c201d9d644_24708577',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'c4e026c75fdc8932c8830f256b24920be5b887e4' => 
     array (
       0 => 'C:\\xampp\\htdocs\\dashboard\\sgarcia\\PaginaMVC\\admin\\templates\\datTec_admin.tpl',
-      1 => 1476827747,
+      1 => 1476833057,
       2 => 'file',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:list_DatTec_Admin.tpl' => 1,
   ),
 ),false)) {
-function content_58069ac64269b4_26981867 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5806c201d9d644_24708577 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <form action="" method="POST" enctype="multipart/form-data" id="add_dat_tec">
   <div class="form-group">

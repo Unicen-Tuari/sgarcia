@@ -48,6 +48,35 @@ class controller_DatTec_Admin
      $this->viewDatTec->showListDat($datos);
     }
 
+    public function editarDatoTecnico()
+    { if (isset($_REQUEST['maquina'])){
+      $id_maq = (int)$_REQUEST['maquina'];
+      $dato=$this->modelDatTec->listDatoTec($id_maq);
+      }
+      $this->viewDatTec->showDatEdit($dato);
+    }
+
+    public function AgregarDatoTecnicoAct()
+    {
+      if (isset($_POST['id_maq']) && $_POST['id_maq']!=''){
+      $id_maq= $_POST['id_maq'];
+      $denominacion= $_POST['denominacion'];
+      $potencia = $_POST['potencia'];
+      $altura = $_POST['altura'];
+      $ancho = $_POST['ancho'];
+      $peso = $_POST['peso'];
+      $capacidad = $_POST['capacidad'];
+      $this->modelDatTec->agregarDatoAct($id_maq,$denominacion,$potencia,$altura,$ancho,$peso,$capacidad);
+    }
+    $maquinas=$this->modelMaq->listarMaquinas();
+    $datos = $this->modelDatTec->listarDatosTec();
+    $this->viewDatTec->show($maquinas,$datos);
+
+    }
+
+
+
+
 
 }
 ?>

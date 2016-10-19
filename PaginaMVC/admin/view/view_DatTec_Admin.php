@@ -19,6 +19,11 @@ class view_DatTec_admin {
     $this->smarty->display('list_DatTec_Admin.tpl');
   }
 
+  public function showDatEdit($dato){
+  $this->smarty->assign('dato',$dato);
+  $this->smarty->display('list_Dat_Edit.tpl');
+}
+
 }
 
 

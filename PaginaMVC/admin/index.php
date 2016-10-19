@@ -14,7 +14,7 @@
      }
 
   else {
-    
+
     switch ($_REQUEST[appConfig::$ACTION]) {
       case appConfig::$ACTION_MAQ_ADMIN:
           $controllerMaq_Admin= new Controller_Maq_Admin();
@@ -51,6 +51,16 @@
           //print_r($_REQUEST);
           $controllerDat_Admin= new controller_DatTec_Admin();
           $controllerDat_Admin->BorrarDatoTecnico();
+          break;
+      case appConfig::$ACTION_UPD_DAT_TEC:
+          //print_r($_REQUEST);
+          $controllerDat_Admin= new controller_DatTec_Admin();
+          $controllerDat_Admin->editarDatoTecnico();
+          break;
+      case appConfig::$ACTION_ADD_UPD_DAT_TEC:
+          //print_r($_REQUEST);
+          $controllerDat_Admin= new controller_DatTec_Admin();
+          $controllerDat_Admin->AgregarDatoTecnicoAct();
           break;
 
       default:

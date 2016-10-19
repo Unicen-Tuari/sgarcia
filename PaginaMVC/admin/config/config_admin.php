@@ -10,6 +10,8 @@ class appConfig{
   public static $ACTION_DATTEC_ADMIN = 'mostrar_dattec_admin';
   public static $ACTION_ADD_DAT_TEC = 'agregar_Dat_Tec';
   public static $ACTION_DEL_DAT_TEC = 'delete_dat';
+  public static $ACTION_UPD_DAT_TEC = 'editar_dato';
+  public static $ACTION_ADD_UPD_DAT_TEC = 'agregar_dato_modificado';
 }
 
 ?>
