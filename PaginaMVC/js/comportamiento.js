@@ -1,6 +1,11 @@
 "use strict";
+function recargarContenido(receivedData){
+  $("#contenido").html(receivedData)
+}
+
 $(document).ready(function(){
 cargaretiqueta("index.php?action=mostrar_home");
+
 
 function cargaretiqueta(etiqueta) {
     $.ajax({
@@ -14,12 +19,13 @@ function cargaretiqueta(etiqueta) {
             cache: false,
             processData:false,
             success: function (receivedData) {
-             $("#contenido").html(receivedData);
+              recargarContenido(receivedData);
+              //mostrarLaMaquina();
             },
           }
         );
   }
-
+/*
   $('#login').submit(function(e){
   e.preventDefault();
   var claveIng = $('#clav').value;
@@ -37,8 +43,7 @@ function cargaretiqueta(etiqueta) {
  });
 
  });
-
-
+*/
 
   $("#home").on("click", function(e){
     e.preventDefault();
@@ -52,6 +57,7 @@ function cargaretiqueta(etiqueta) {
   $("#maquinas").on("click", function(e){
     e.preventDefault();
     cargaretiqueta("index.php?action=mostrar_maquinas")});
+
   $("#contacto").on("click", function(e){
     e.preventDefault();
     cargaretiqueta("index.php?action=formulario_contacto")});

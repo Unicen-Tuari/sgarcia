@@ -34,6 +34,11 @@
             $controllerMaq= new Controller_Maq();
             $controllerMaq->Cargar();
               break;
+      case appConfig::$ACTION_MOSTRA_DET_MAQUINA:
+            $controllerMaq= new Controller_Maq();
+            $controllerMaq->mostrarMaquina();
+            break;
+
 
       case appConfig::$ACTION_DATOS_TECNICOS:
             $controllerDatTec= new Controller_DatTec();

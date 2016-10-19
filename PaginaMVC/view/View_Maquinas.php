@@ -12,6 +12,11 @@ class View_Maquinas {
     //print_r($maquinas);
     $this->smarty->display('maquinas.tpl');
   }
+  public function showMaq($dato,$maquina){
+   $this->smarty->assign('dato',$dato);
+   $this->smarty->assign('maquina',$maquina);
+   $this->smarty->display('tabla_Maquina.tpl');
+  }
 
 
 }
