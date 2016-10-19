@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-10-16 05:54:37
+/* Smarty version 3.1.30, created on 2016-10-19 22:37:07
   from "C:\xampp\htdocs\dashboard\sgarcia\PaginaMVC\admin\templates\list_Maq_Admin.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5802f9fd4dae97_11582558',
+  'unifunc' => 'content_5807d973e858e0_21864772',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '314a198c8642806035fa481664ee72d97f428ada' => 
     array (
       0 => 'C:\\xampp\\htdocs\\dashboard\\sgarcia\\PaginaMVC\\admin\\templates\\list_Maq_Admin.tpl',
-      1 => 1476590044,
+      1 => 1476909357,
       2 => 'file',
     ),
   ),
@@ -20,9 +20,9 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5802f9fd4dae97_11582558 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5807d973e858e0_21864772 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
-<ul class="list-group">
+<ul class="list-group col-md-offset-2 col-md-8">
   <?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['maquinas']->value, 'maquina');
 if ($_from !== null) {

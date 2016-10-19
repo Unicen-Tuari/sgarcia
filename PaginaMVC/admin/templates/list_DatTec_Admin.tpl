@@ -1,4 +1,4 @@
-<ul class="list-group">
+<ul class="list-group col-md-offset-2 col-md-8">
   {foreach from=$datos item=dato}
      <li class="list-group-item">
          {if $dato['imagenes'] }

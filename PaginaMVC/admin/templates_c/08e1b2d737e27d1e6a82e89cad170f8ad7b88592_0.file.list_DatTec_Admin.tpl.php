@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-10-19 02:44:49
+/* Smarty version 3.1.30, created on 2016-10-19 22:42:21
   from "C:\xampp\htdocs\dashboard\sgarcia\PaginaMVC\admin\templates\list_DatTec_Admin.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5806c201e0f2a2_51909207',
+  'unifunc' => 'content_5807daade95f98_94574957',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '08e1b2d737e27d1e6a82e89cad170f8ad7b88592' => 
     array (
       0 => 'C:\\xampp\\htdocs\\dashboard\\sgarcia\\PaginaMVC\\admin\\templates\\list_DatTec_Admin.tpl',
-      1 => 1476833063,
+      1 => 1476909672,
       2 => 'file',
     ),
   ),
@@ -20,9 +20,9 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5806c201e0f2a2_51909207 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5807daade95f98_94574957 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
-<ul class="list-group">
+<ul class="list-group col-md-offset-2 col-md-8">
   <?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['datos']->value, 'dato');
 if ($_from !== null) {

@@ -73,7 +73,7 @@ $(document).ready(function(){
    processData:false,
    success: function(receivedData){
        recargarListaMaq(receivedData);
-
+       $("#add_maq").trigger("reset");
             }
    });
    });

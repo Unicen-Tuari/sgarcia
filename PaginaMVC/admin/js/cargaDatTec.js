@@ -52,8 +52,8 @@ $(".updateAction").on("click",function(e){
   $.get("index.php?action=editar_dato",
      { maquina: id_maq },
        function(data){
-       $("#contenido").html(data);
-       cargarDatActualizado();
+        $("#contenido").html(data);
+         cargarDatActualizado();
      });
 
   });
@@ -76,6 +76,7 @@ $(document).ready(function(){
     success: function(receivedData){
       console.log(receivedData);
         recargarListaDat(receivedData);
+        $("#add_dat_tec").trigger("reset");
       }
     });
     });

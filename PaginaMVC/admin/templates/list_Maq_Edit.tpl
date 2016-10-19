@@ -1,11 +1,18 @@
+<div class="col-md-offset-2 col-md-8 panel panel-default">
+<div class="panel-heading">
+  <h3 class="panel-title text-center">Editor de Maquina</h3>
+</div>
+<div class="panel-body">
 <form action="" method="POST" enctype="multipart/form-data" id="upd_maq">
   <div class="form-group">
     <label for="nombre">id</label>
     <input type="text" id="id_maq"  class="form-control dato" name="id_maq" value="{$maquina[0]['id_maq']}" placeholder="Denominacion" >
-
+</div>
+<div class="form-group">
     <label for="nombre">Nombre</label>
     <input type="text" id="nombre"  class="form-control dato" name="nombre" value="{$maquina[0]['nombre']}" placeholder="Denominacion" >
-
+</div>
+<div class="form-group">
     <label for="tipo">Tipo</label>
     <select name="tipo" class="form-control" id="tipo">
     <option value="{$maquina[0]['tipo']}"> {$maquina[0]['tipo']} - Valor Actual </option>
@@ -14,13 +21,16 @@
      <option value="Mixer">Mixer</option>
      <option value="Mixer-Dual">Mixer-Dual</option>
     </select>
-
+</div>
+<div class="form-group">
     <label for="precio">Precio</label>
     <input type="text" id="precio" class="form-control dato" name="precio" value="{$maquina[0]['precio']}"placeholder="Valor en pesos">
-
+</div>
+<div class="form-group">
     <label for="image">Agregar Imagenes</label>
     <input type="file" name="image[]" id="image" multiple>
     </div>
 
      <button type="submit" id="Guardar_upd_maq" class="btn btn-default">Cargar</button>
 </form>
+</div>

@@ -1,4 +1,4 @@
-<ul class="list-group">
+<ul class="list-group col-md-offset-2 col-md-8">
   {foreach from=$maquinas item=maquina}
     <li class="list-group-item">
       <strong>Nombre:{$maquina['nombre']}&nbsp;</strong> <br><strong>Tipo:</strong>{$maquina['tipo']}&nbsp;<br><strong>Precio:$</strong>{$maquina['precio']}
