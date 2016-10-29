@@ -8,7 +8,7 @@ class View_DatTec {
 
   public function show($maquinas){
     $this->smarty_tec->assign('maquinas',$maquinas);
-    $this->smarty_tec->display('tecnica.tpl');
+    $this->smarty_tec->display('fichaTecnica.tpl');
   }
 
 }

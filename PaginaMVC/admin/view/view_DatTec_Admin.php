@@ -12,6 +12,7 @@ class view_DatTec_admin {
     //var_dump((int)$maquinas[0]['id_maq']);
     $this->smarty->assign('datos',$datos);
     $this->smarty->display('datTec_admin.tpl');
+
   }
 
   public function showListDat($datos){
@@ -22,6 +23,7 @@ class view_DatTec_admin {
   public function showDatEdit($dato){
   $this->smarty->assign('dato',$dato);
   $this->smarty->display('list_Dat_Edit.tpl');
+  
 }
 
 }

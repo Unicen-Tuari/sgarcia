@@ -1,7 +1,13 @@
 <ul class="list-group col-md-offset-2 col-md-8">
      <li class="list-group-item">
-         {if $maquina[0]['imagenes'] }
-         <img src="{$maquina[0]['imagenes'][0]['path']}" alt="{$maquina[0]['nombre']}_image_{$index}" WIDTH=140 HEIGHT=210 class="img-thumbnail" />
+
+       {if $maquina[0]['imagenes'] }
+       {foreach from=$maquina[0]['imagenes'] item=img}
+       <img src="{$img['path']}" alt="{$maquina[0]['nombre']}_image_{$index}" WIDTH=140 HEIGHT=210 class="img-thumbnail" />
+       {/foreach}
+       {/if}
+
+
            <table class="table table-striped">
              <thead>
                <tr>
@@ -22,36 +28,17 @@
                <td>{$maquina[0]['precio']}</td>
                </tr>
                {if $maquina[0]['datos_tecnicos'] }
-               <tr>
-               <td>Denominacion</td>
-               <td>{$dato[0]['denominacion']}</td>
-               </tr>
-               <tr>
-               <td>Potencia</td>
-               <td>{$dato[0]['potencia']}</td>
-               </tr>
-               <tr>
-               <td>Altura</td>
-               <td>{$dato[0]['altura']}</td>
-               </tr>
-               <tr>
-               <td>Ancho</td>
-               <td>{$dato[0]['ancho']}</td>
-               </tr>
-               <tr>
-               <td>Peso</td>
-               <td>{$dato[0]['peso']}</td>
-               </tr>
-               <tr>
-               <td>Capacidad</td>
-               <td>{$dato[0]['capacidad']}</td>
-               </tr>
+               {foreach from=$maquina[0]['dat_tec'] key=index item=dato}
+                 <tr>
+                 <td>{$dato['caracteristica']}</td>
+                 <td>{$dato['valor']}</td>
+                 </tr>
+               {/foreach}
               {/if}
              </tbody>
              <button type="submit" id="volver" class="btn btn-default">Volver</button>
            </table>
          </div>
-         {/if}
      </li>
 
 </ul>

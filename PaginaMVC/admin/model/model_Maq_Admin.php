@@ -28,8 +28,13 @@ public function listarMaquina($id){
 $maq_to_return =[];
 $select = $this->db->prepare("select * from maquina where id_maq=?");
 $select->execute(array($id));
-$maquinas = $select->fetchAll(PDO::FETCH_ASSOC);
-foreach ($maquinas as $idMaq => $maquina) {
+$maq_return = $select->fetchAll(PDO::FETCH_ASSOC);
+foreach ($maq_return as $idMaq => $maquina) {
+  $select1 = $this->db->prepare("select * from datos_tecnicos where id_maq=?");
+  $select1->execute(array($maquina['id_maq']));
+  $datos = $select1->fetchAll(PDO::FETCH_ASSOC);
+  $maquina['dat_tec'] = $datos;
+
   $select = $this->db->prepare("select * from imagen where fk_id_maq=?");
   $select->execute(array($maquina['id_maq']));
   $images = $select->fetchAll(PDO::FETCH_ASSOC);
@@ -45,8 +50,8 @@ return $maq_to_return;
   $dat_Tec=0;
   $insert->execute(array($nombre,$tipo,$precio,$dat_Tec));
   $fk_id_maq = $this->db->lastInsertId();
-
-  foreach ($images as $image) {
+  foreach ($images as $img => $image) {
+  print_r($image);
     $path_image =  $this->copyImage($image);
     $insert = $this->db->prepare("INSERT INTO imagen(path, fk_id_maq) VALUES(?,?)");
     $insert->execute(array($path_image,$fk_id_maq));

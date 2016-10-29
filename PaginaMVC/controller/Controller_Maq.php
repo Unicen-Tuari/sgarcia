@@ -33,11 +33,11 @@ class Controller_Maq
      //var_dump($_REQUEST['maquina']);
      $id_maq = (int)$_REQUEST['maquina'];
    }
-   $dato=$this->modDat->listDatoTec($id_maq);
    $maquina=$this->modMaq->listarMaquina($id_maq);
+   //$maquina['datos']=$this->modDat->listDatoTec($id_maq);
    //print_r($dato);
    //print_r($maquina);
-   $this->viewMaq->showMaq($dato,$maquina);
+   $this->viewMaq->showMaq($maquina);
 
 
 

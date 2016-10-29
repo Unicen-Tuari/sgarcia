@@ -26,56 +26,45 @@ class controller_DatTec_Admin
  public function AgregarDatoTecnico(){
        if (isset($_POST['id_maq']) && $_POST['id_maq']!=''){
        $id_maq = (int)$_POST['id_maq'];
-       $denom = $_POST['denominacion'];
-       $potencia = $_POST['potencia'];
-       $altura = $_POST['altura'];
-       $ancho = $_POST['ancho'];
-       $peso = $_POST['peso'];
-       $capacidad = $_POST['capacidad'];
-       $this->modelDatTec->agregarDatosTecnicos($id_maq,$denom,$potencia,$altura,$ancho,$peso,$capacidad);
+       $carac = $_POST['caracteristica'];
+       $val = $_POST['valor'];
+       $this->modelDatTec->agregarDatosTecnicos($id_maq,$carac,$val);
     }
     $datos = $this->modelDatTec->listarDatosTec();
     $this->viewDatTec->showListDat($datos);
    }
 
  public function BorrarDatoTecnico(){
-     if (isset($_REQUEST['maquina'])){
-       //var_dump($_REQUEST['maquina']);
-       $id_maq = (int)$_REQUEST['maquina'];
-       $this->modelDatTec->borrarDato($id_maq);
+     if (isset($_REQUEST['dato'])){
+       $id_dat = (int)$_REQUEST['dato'];
+       $this->modelDatTec->borrarDato($id_dat);
      }
      $datos = $this->modelDatTec->listarDatosTec();
      $this->viewDatTec->showListDat($datos);
     }
 
     public function editarDatoTecnico()
-    { if (isset($_REQUEST['maquina'])){
-      $id_maq = (int)$_REQUEST['maquina'];
-      $dato=$this->modelDatTec->listDatoTec($id_maq);
+    { if (isset($_REQUEST['dato'])){
+      $id_dat = (int)$_REQUEST['dato'];
+      $dato=$this->modelDatTec->listDatoTec($id_dat);
       }
       $this->viewDatTec->showDatEdit($dato);
     }
 
     public function AgregarDatoTecnicoAct()
-    {
+    { 
       if (isset($_POST['id_maq']) && $_POST['id_maq']!=''){
+      $id_dat= $_POST['id_dat'];
       $id_maq= $_POST['id_maq'];
-      $denominacion= $_POST['denominacion'];
-      $potencia = $_POST['potencia'];
-      $altura = $_POST['altura'];
-      $ancho = $_POST['ancho'];
-      $peso = $_POST['peso'];
-      $capacidad = $_POST['capacidad'];
-      $this->modelDatTec->agregarDatoAct($id_maq,$denominacion,$potencia,$altura,$ancho,$peso,$capacidad);
+      $caract= $_POST['caracteristica'];
+      $val = $_POST['valor'];
+      $this->modelDatTec->agregarDatoAct($id_dat,$id_maq,$caract,$val);
     }
     $maquinas=$this->modelMaq->listarMaquinas();
     $datos = $this->modelDatTec->listarDatosTec();
     $this->viewDatTec->show($maquinas,$datos);
 
     }
-
-
-
 
 
 }

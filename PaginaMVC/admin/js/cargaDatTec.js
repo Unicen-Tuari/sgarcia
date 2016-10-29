@@ -15,10 +15,10 @@ function recargarListaDatAct(data) {
 function borrarDatTec() {
 $(".deleteAction").on("click",function(e){
   e.preventDefault();
-  var id_maq = $(this).attr("id-maq");
+  var id_dat = $(this).attr("id-dat");
    //alert("le da bola al boton "+id_maq);
   $.get("index.php?action=delete_dat",
-     { maquina: id_maq },
+     { dato: id_dat },
      function(data){
        recargarListaDat(data);
      });
@@ -39,7 +39,6 @@ function cargarDatActualizado(){
      processData:false,
      success: function(receivedData){
          recargarListaDatAct(receivedData);
-
               }
      });
      });
@@ -48,11 +47,11 @@ function cargarDatActualizado(){
 function actualizarDato() {
 $(".updateAction").on("click",function(e){
   e.preventDefault();
-  var id_maq = $(this).attr("id-maq");
+  var id_dat = $(this).attr("id-dat");
   $.get("index.php?action=editar_dato",
-     { maquina: id_maq },
+     { dato: id_dat },
        function(data){
-        $("#contenido").html(data);
+         $("#"+id_dat).html(data);
          cargarDatActualizado();
      });
 
@@ -76,7 +75,7 @@ $(document).ready(function(){
     success: function(receivedData){
       console.log(receivedData);
         recargarListaDat(receivedData);
-        $("#add_dat_tec").trigger("reset");
+        $('#add_dat_tec').trigger("reset");
       }
     });
     });

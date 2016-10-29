@@ -39,6 +39,7 @@ function cargarMaqActualizada(){
      processData:false,
      success: function(receivedData){
          recargarListaMaqAct(receivedData);
+         $('#upd_maq').trigger("reset");
 
               }
      });

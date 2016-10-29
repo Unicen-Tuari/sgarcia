@@ -16,3 +16,6 @@ text-align: center;}
 .cuerpoEmpresa p{
   text-align: justify;
 }
+.ocult_list_edit{
+  display: none;
+}
